@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Sacramento&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FBB2EB;
+}
+
+.my-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.my-pic {
+    padding: 50px 0;
+
+    img {
+        width: 200px;
+    }
+}
+
+.my-front {
+    text-align: center;
+    /* background-color: blanchedalmond; */
+
+    h1 {
+        line-height: 80px;
+        font-size: 80px;
+        font-family: 'Sacramento', cursive;
+
+        span {
+            font-size: 40px;
+            margin: -20px;
+        }
+    }
+
+    h2 {
+        line-height: 60px;
+        font-family: 'Imprima', sans-serif;
+    }
+
+    .font-awe {
+        font-size: 30px;
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+    
+}
+
