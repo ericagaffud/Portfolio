@@ -10,48 +10,275 @@ body {
 }
 
 .my-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   place-items: center;
 }
 
 .my-pic {
-  padding: 50px 0;
-}
-.my-pic img {
   width: 200px;
+  display: grid;
+  height: 350px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  place-content: center;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
+.my-pic .stack {
+  position: absolute;
+}
+.my-pic .first-bg {
+  width: 200px;
+  height: 230px;
+  margin-top: -1em;
+  margin-left: -1em;
+  background: linear-gradient(208.97deg, #F99A9A 16.61%, #FF4DB8 60.76%);
+}
+.my-pic .second-bg {
+  width: 200px;
+  height: 230px;
+  z-index: 1;
+}
+.my-pic .second-bg img {
+  width: 200px;
+}
+.my-pic .third-bg {
+  width: 200px;
+  max-width: 250px;
+  height: 230px;
+  max-height: 290px;
+  margin-top: 2em;
+  margin-left: 1em;
+  background: linear-gradient(208.97deg, #F99A9A 16.61%, #FF4DB8 60.76%);
+}
+.my-pic .left-big-circle {
+  width: 40px;
+  height: 40px;
+  top: 250px;
+  left: -15px;
+  float: left;
+  position: fixed;
+  border-radius: 50%;
+  background-color: white;
+}
+.my-pic .left-small-circle {
+  width: 20px;
+  height: 20px;
+  top: 350px;
+  left: 50px;
+  float: right;
+  position: fixed;
+  border-radius: 50%;
+  background-color: white;
+}
+.my-pic .left-strip {
+  top: 0;
+  left: 40px;
+  float: right;
+  height: 0px;
+  width: 10px;
+  position: fixed;
+  background-color: white;
+}
+.my-pic .right-strip {
+  top: 0;
+  right: 40px;
+  float: right;
+  height: 0px;
+  width: 10px;
+  position: fixed;
+  background-color: white;
+}
+.my-pic .right-big-circle {
+  width: 40px;
+  height: 40px;
+  top: 490px;
+  right: 35px;
+  float: left;
+  position: fixed;
+  border-radius: 50%;
+  background-color: white;
+}
+.my-pic .right-small-circle {
+  width: 20px;
+  height: 20px;
+  top: 400px;
+  right: -2px;
+  float: right;
+  position: fixed;
+  border-radius: 50%;
+  background-color: white;
 }
 
 .my-front {
+  font-size: 20px;
   text-align: center;
-  /* background-color: blanchedalmond; */
+  max-width: 600px;
 }
 .my-front h1 {
-  line-height: 80px;
-  font-size: 80px;
+  font-size: 5rem;
   font-family: "Sacramento", cursive;
 }
 .my-front h1 span {
-  font-size: 40px;
-  margin: -20px;
+  font-size: 2.5rem;
+  margin: -1.5rem;
 }
 .my-front h2 {
-  line-height: 60px;
+  font-size: 1.5rem;
   font-family: "Imprima", sans-serif;
 }
 .my-front .font-awe {
-  font-size: 30px;
-  margin-top: 20px;
-  padding: 10px;
-  width: 100%;
+  font-size: 2rem;
+  margin-top: 3rem;
+  padding: 0.2em;
+  width: auto;
   height: 50px;
   background-color: white;
 }
 .my-front a {
   text-decoration: none;
   color: black;
-  padding: 10px;
+  /* padding: 1em; */
 }
-.my-front a:hover {
-  transform: scale(1.5);
+.my-front a i:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and (min-width: 376px) {
+  .my-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    place-items: center;
+    justify-content: space-around;
+  }
+  .my-pic {
+    padding: 0;
+    width: auto;
+    place-content: center;
+    flex-wrap: wrap;
+  }
+  .my-pic .first-bg, .my-pic .third-bg {
+    width: 250px;
+    height: 290px;
+  }
+  .my-pic .second-bg {
+    width: 250px;
+    height: 290px;
+  }
+  .my-pic .second-bg img {
+    width: 250px;
+    opacity: 0;
+  }
+  .my-pic .bottom-long-strip {
+    bottom: 80px;
+    left: 0;
+    float: left;
+    height: 10px;
+    width: 0px;
+    position: fixed;
+    background-color: white;
+  }
+  .my-pic .bottom-short-strip {
+    bottom: 50px;
+    left: 0;
+    float: left;
+    height: 10px;
+    width: 0px;
+    position: fixed;
+    background-color: white;
+  }
+  .my-pic .bottom-big-circle {
+    width: 50px;
+    height: 50px;
+    bottom: -15px;
+    right: 0px;
+    float: right;
+    position: fixed;
+    border-radius: 50%;
+    background-color: white;
+  }
+  .my-pic .bottom-small-circle {
+    width: 30px;
+    height: 30px;
+    bottom: 50px;
+    right: 0px;
+    float: right;
+    position: fixed;
+    border-radius: 50%;
+    background-color: white;
+  }
+  .my-pic .left-strip,
+.my-pic .right-strip,
+.my-pic .left-big-circle,
+.my-pic .left-small-circle,
+.my-pic .right-big-circle,
+.my-pic .right-small-circle {
+    display: none;
+  }
+  .my-front {
+    font-size: 30px;
+    /*          .font-awe {
+                font-size: 2rem;
+                margin-top: 80px;
+                width: 90%;
+                height: 60px;
+                background-color: white;
+            } */
+  }
+  .my-front h1 {
+    font-size: 8rem;
+  }
+  .my-front h1 span {
+    font-size: 4rem;
+  }
+  .my-front h2 {
+    font-size: 2rem;
+    line-height: 60px;
+    font-family: "Imprima", sans-serif;
+  }
+  .my-front a {
+    padding: 20px;
+  }
+  .my-front .top-long-strip {
+    top: 80px;
+    right: 0;
+    float: right;
+    height: 10px;
+    width: 0px;
+    position: fixed;
+    background-color: white;
+  }
+  .my-front .top-short-strip {
+    top: 50px;
+    right: 0;
+    float: right;
+    height: 10px;
+    width: 0px;
+    position: fixed;
+    background-color: white;
+  }
+  .my-front .top-big-circle {
+    width: 50px;
+    height: 50px;
+    top: -15px;
+    left: 0px;
+    float: left;
+    position: fixed;
+    border-radius: 50%;
+    background-color: white;
+  }
+  .my-front .top-small-circle {
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    left: 0px;
+    float: left;
+    position: fixed;
+    border-radius: 50%;
+    background-color: white;
+  }
 }/*# sourceMappingURL=index-style.css.map */
