@@ -22,21 +22,6 @@ body {
   padding-bottom: 40vh;
   scroll-behavior: smooth;
 }
-.container .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: sticky;
-  top: -40vh;
-  z-index: 100;
-  color: #fff;
-}
-.container .header--name {
-  font-family: "Cookie", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
 .container img {
   width: 30%;
   transition: transform 0.3s ease;

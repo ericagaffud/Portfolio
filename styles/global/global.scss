@@ -115,10 +115,34 @@ button {
     }
 }
 
+    
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    position: sticky;
+    top: -40vh;
+    z-index: 100;
+    color: #fff;
+
+    &--name {
+        font-family: "Cookie", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    &--button {
+            
+    }
+}
+
 .header-menu {
     display: none;
     height: 100%;
     width: 100%;
+    position: absolute;
 
     z-index: 1000;
 
