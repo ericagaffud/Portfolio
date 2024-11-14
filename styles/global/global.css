@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cookie&family=Julius+Sans+One&family=Petit+Formal+Script&display=swap");
 :root {
   --primary-color: #060930;
   --primary-color-shade: #00021d;
@@ -106,9 +107,6 @@ button {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  position: sticky;
-  top: -40vh;
-  z-index: 100;
   color: #fff;
 }
 .header--name {
@@ -121,6 +119,8 @@ button {
   height: 100%;
   width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1000;
 }
 .header-menu--item {

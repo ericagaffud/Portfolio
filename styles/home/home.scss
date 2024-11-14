@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cookie&family=Julius+Sans+One&family=Petit+Formal+Script&display=swap');
-
 body {
     height: 100vh;
     width: 100vw;
@@ -22,6 +20,12 @@ body {
     padding-top: 40vh;
     padding-bottom: 40vh;
     scroll-behavior: smooth;
+
+    .header {
+        position: sticky;
+        top: -40vh;
+        z-index: 100;
+    }
 
     img {
         width: 30%;

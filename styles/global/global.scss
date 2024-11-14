@@ -25,6 +25,8 @@ body {
     background: linear-gradient(179.75deg, #0B1050 -10.75%, #C9004D 114.81%);;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cookie&family=Julius+Sans+One&family=Petit+Formal+Script&display=swap');
+
 button {
     color: #fff;
     border: none;
@@ -121,10 +123,6 @@ button {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
-    position: sticky;
-    top: -40vh;
-    z-index: 100;
     color: #fff;
 
     &--name {
@@ -143,6 +141,8 @@ button {
     height: 100%;
     width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
 
     z-index: 1000;
 
