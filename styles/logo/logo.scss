@@ -8,18 +8,9 @@ body {
 }
 
 .container {
-    width: 80vw;
-    height: 90vh;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    height: 90vh !important;
 
     .header {
-        // background-color: #fff;
-        // color: var(--tertiary-color);
-        // padding: 10px;
-        // border-radius: 5px;
-
         position: sticky;
         z-index: 100;
         top: 0rem;
