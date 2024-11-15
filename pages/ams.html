@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <title>Erica Gaffud | Accident Monitoring System</title>
+    <link rel="stylesheet" href="../styles/global/global.css">
+    <link rel="stylesheet" href="../styles/ams/ams.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="header-menu"></div>
+
+        <div class="ams-container">
+            <h2> Accident Monitoring System </h2><br>
+            <h6> A system designed to detect, monitor, and respond to accidents in real-time. 
+                AMS is to enhance safety by minimizing response times, improving situational awareness, and increasing the chance of saving people's lives.
+            </h6><br><br>
+            <h4> Login Credentials: </h4>
+            <h4 class="title"> Usernames </h4>
+            <h4 class="font-style"> guest_user <i class="fas fa-clone"></i></h4>
+            <h4 class="font-style"> guest_benefactor <i class="fas fa-clone"></i></h4>
+            <br>
+            <h4 class="title"> Password </h4>
+            <h4 class="font-style"> Accidentm0nit0ring0621! <i class="fas fa-clone"></i></h4><br><br>
+            <a class="ams-btn">Go to Website</a>
+        </div>
+    </div>
+    <div class="backdrop"></div>
+
+    <script src="../script/global.js"></script>
+    <script >
+        $(document).ready(function(){
+            $('.ams-btn').on('click', function(){
+                $('.backdrop').css({'display': 'flex'})
+                $('.backdrop').load('../../components/loader.html');
+
+                setTimeout(() => {
+                    window.open('https://ericagaffud.github.io/Accident-Monitoring-System/', '_blank');
+                    $('.backdrop').hide();
+                }, 1000);
+            });
+
+            $(".fa-clone").on("click", function () {
+                var text = $(this).parent().text().trim();
+
+                navigator.clipboard.writeText(text).then(() => {
+                    var $tooltip = $("<div class='tooltip'>Copied!</div>");
+                    $("body").append($tooltip);
+
+                    var offset = $(this).offset();
+                    $tooltip.css({
+                        top: offset.top - $tooltip.outerHeight() - 10,
+                        left: offset.left + $(this).outerWidth() / 2 - $tooltip.outerWidth() / 2
+                    });
+
+                    $tooltip.addClass("visible");
+                    setTimeout(() => {
+                        $tooltip.remove();
+                    }, 1500);
+                }).catch(err => {
+                    console.error("Failed to copy text: ", err);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

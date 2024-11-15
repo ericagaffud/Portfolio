@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+
+.container {
+    overflow: hidden !important;
+}
+
+.ams-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    max-width: 45rem;
+    margin: auto;
+
+    .title {
+        text-decoration: underline;
+    }
+
+    .font-style {
+        font-family: "Dokdo", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .ams-btn {
+        text-decoration: none;
+        color: #fff;
+        background-color: var(--tertiary-color);
+        border: none;
+        border-radius: 5px;
+        padding: 5px 30px;
+
+        cursor: pointer;
+    }
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .ams-container {
+
+        h2 {
+            font-size: clamp(2rem, 1.143rem + 1.786vw, 4rem);
+        }
+
+        h6 {
+            font-size: clamp(0.9rem, 0.429rem + 0.982vw, 2rem);
+        }
+
+        h4 {
+            font-size: clamp(1.3rem, 0.829rem + 0.982vw, 2.4rem);
+
+            i {
+                font-size: clamp(1.1rem, 0.714rem + 0.804vw, 2rem);
+                cursor: pointer;
+            }
+        }
+
+        .ams-btn {
+            font-size: clamp(1.1rem, 0.714rem + 0.804vw, 2rem);
+        }
+    }
+}
