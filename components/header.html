@@ -2,8 +2,28 @@
 <div class="header--button">
     <i class="fa-solid fa-bars"></i>
 </div>
+<div class="header--items">
+    <div class="header--item active" data-page="">
+        <h1> Home </h1>
+    </div>
+    <div class="header--item second" data-page="work">
+        <h1> Work </h1>
+    </div>
+    <div class="header--item third" data-page="about">
+        <h1> About </h1>
+    </div>
+    <div class="header--item fourth" data-page="resume">
+        <h1> Resume </h1>
+    </div>
+</div>
 <script>
     $('.header--button').on('click', function(){
         $('.header-menu').css("display", "grid");
-    })
+    });
+
+    $('.header--item').on('click', function(){
+        var page = $(this).data('page');
+        console.log(page);
+        window.location.href = page == '' ? '/index.html' : 'pages/' + page + '.html';
+    });  
 </script>

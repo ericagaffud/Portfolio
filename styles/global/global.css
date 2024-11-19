@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cookie&family=Julius+Sans+One&family=Petit+Formal+Script&display=swap");
 :root {
   --primary-color: #060930;
@@ -15,6 +16,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -115,6 +119,7 @@ button {
   font-weight: 800;
 }
 
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -127,6 +132,13 @@ button {
   font-weight: 400;
   font-style: normal;
 }
+.header--button {
+  font-size: clamp(0.75rem, 0.471rem + 1.626vw, 1.25rem);
+}
+.header--items {
+  display: none;
+}
+
 .header-menu {
   display: none;
   height: 100%;
@@ -197,6 +209,7 @@ button {
   animation-delay: 0.1s;
 }
 
+/********************END HEADER*****************/
 /* Loader */
 .backdrop {
   position: fixed;
@@ -243,5 +256,20 @@ button {
   to {
     transform: translateY(-30px);
     opacity: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header--name {
+    font-size: clamp(1.5rem, -0.167rem + 2.604vw, 4rem);
+  }
+  .header--button {
+    display: none;
+  }
+  .header--items {
+    display: flex;
+    gap: clamp(1.2rem, -1.333rem + 3.958vw, 5rem);
+  }
+  .header--items .header--item h1 {
+    font-size: clamp(1.2rem, 0.667rem + 0.833vw, 2rem);
   }
 }/*# sourceMappingURL=global.css.map */

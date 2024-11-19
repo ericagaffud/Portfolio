@@ -13,12 +13,16 @@
     --tertiary-color-tint: #ff448b;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 
-    // font-family: 'Courier New', Courier, monospace;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
@@ -133,7 +137,7 @@ button {
     }
 }
 
-    
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -148,7 +152,11 @@ button {
     }
 
     &--button {
-            
+        font-size: clamp(0.75rem, 0.471rem + 1.626vw, 1.25rem);
+    }
+
+    &--items {
+        display: none;
     }
 }
 
@@ -239,6 +247,9 @@ button {
         }
     }
 }
+
+/********************END HEADER*****************/
+
 /* Loader */
 .backdrop {
     position: fixed;
@@ -285,5 +296,28 @@ button {
     to {
         transform: translateY(-30px);
         opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .header {
+        &--name {
+            font-size: clamp(1.5rem, -0.167rem + 2.604vw, 4rem);
+        }
+
+        &--button {
+            display: none;
+        }
+
+        &--items {
+            display: flex;
+            gap: clamp(1.2rem, -1.333rem + 3.958vw, 5rem);
+
+            .header--item {
+                h1 {
+                    font-size: clamp(1.2rem, 0.667rem + 0.833vw, 2rem);
+                }
+            }
+        }
     }
 }

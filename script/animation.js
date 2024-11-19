@@ -17,7 +17,7 @@ $(document).ready(function() {
             const imgBottom = imgTop + img.outerHeight();
 
             if (imgBottom > upperBound && imgTop < lowerBound) {
-                img.css('transform', 'scale(3)');
+                img.css('transform', 'scale(2.5)');
             } else {
                 img.css('transform', 'scale(1)');
             }

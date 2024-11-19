@@ -13,6 +13,15 @@
   z-index: 100;
 }
 .container img {
-  width: 30%;
+  width: 6rem;
   transition: transform 0.3s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    gap: clamp(13rem, 11.714rem + 2.679vw, 16rem);
+  }
+  .container img {
+    width: clamp(8rem, 7.143rem + 1.786vw, 10rem);
+  }
 }/*# sourceMappingURL=home.css.map */
