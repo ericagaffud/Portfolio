@@ -5,6 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  background: #ffcfcf !important;
 }
 
 .container {
@@ -39,11 +40,6 @@ body {
     gap: 8rem;
   }
   .container .logoDiv img {
-    height: 6rem;
-  }
-}
-@media only screen and (min-width: 1680px) {
-  .container .logoDiv img {
-    height: 8rem;
+    height: clamp(6rem, 3.333rem + 4.167vw, 10rem);
   }
 }/*# sourceMappingURL=logo.css.map */

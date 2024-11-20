@@ -15,6 +15,7 @@
 .container img {
   width: 6rem;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
