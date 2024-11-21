@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
+body {
+  background: #ffcfcf !important;
+}
+
 .container {
   overflow: hidden !important;
 }
@@ -10,9 +14,16 @@
   justify-content: center;
   text-align: center;
   height: 100%;
-  color: #fff;
-  max-width: 45rem;
+  color: var(--primary-color-tint);
+  max-width: 70rem;
   margin: auto;
+}
+.ams-container h6 {
+  font-weight: 600;
+}
+.ams-container h6 span {
+  font-weight: bolder;
+  color: var(--tertiary-color-shade);
 }
 .ams-container .title {
   text-decoration: underline;
@@ -25,7 +36,7 @@
 .ams-container .ams-btn {
   text-decoration: none;
   color: #fff;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
   border: none;
   border-radius: 10px;
   padding: 5px 30px;
@@ -34,7 +45,7 @@
 
 .tooltip {
   position: absolute;
-  background-color: #333;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 5px 10px;
   border-radius: 4px;
