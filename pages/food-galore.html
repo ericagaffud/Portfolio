@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <title>Erica Gaffud | Food Galore</title>
+    <link rel="stylesheet" href="../styles/global/global.css">
+    <link rel="stylesheet" href="../styles/food-galore/food-galore.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header" data-title="Food Galore"></div>
+
+        <div class="container-image-link">
+            <img class="container-image-link__mobile" src="../assets/food-galore/food-galore-mobile.png" alt="Food Galore">
+            <img class="container-image-link__tablet" src="../assets/food-galore/food-galore-tablet.png" alt="Food Galore">
+            <img class="container-image-link__desktop" src="../assets/food-galore/food-galore-desktop.png" alt="Food Galore">
+        </div>
+        <div class="container-instruction">
+            <h4>Navigate <span>Food Galore</span> by clicking the four (4) images located at the center-left of the prototype.</h4>
+            <h6>**For the best experience, view in full screen at a 1920 resolution.</h6>
+        </div>
+    </div>
+    <div class="backdrop"></div>
+
+    <script src="../script/global.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.container-image-link img').on('click', function(){
+                $('.backdrop').css({'display': 'flex'})
+                $('.backdrop').load('../../components/loader.html');
+
+                setTimeout(() => {
+                    window.open('https://www.figma.com/proto/0ooVPw7FXZwwQzlG6G1jdq/Random-No-Sense?node-id=7-3&node-type=canvas&t=Y7mXA4JHoHPQcfnE-0&scaling=min-zoom&content-scaling=fixed&page-id=7%3A2&starting-point-node-id=7%3A3', '_blank');
+                    $('.backdrop').hide();
+                }, 1000);
+            })
+        })
+    </script>
+</body>
+</html>

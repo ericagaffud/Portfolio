@@ -1,0 +1,86 @@
+.container {
+    &-image-link {
+        display: flex;
+        align-items: center;
+        margin-block: 2rem;
+        padding: 10px;
+        background-color: #f6f6f6;
+        text-align: center;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        &__mobile {}
+
+        &__tablet {
+            display: none;
+        }
+
+        &__desktop {
+            display: none;
+        }
+    }
+
+    &-instruction {
+        color: #f1f1f1;
+        text-align: center;
+
+        h4 {
+            font-weight: 700;
+
+            span {
+                text-decoration: underline;
+                font-weight: 900;
+            }
+        }
+
+        h6 {
+            font-style: italic;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        &-image-link {
+            &__mobile {
+                display: none;
+            }
+
+            &__tablet {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        &-image-link {
+            &__tablet {
+                display: none;
+            }
+
+            &__desktop {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .container {
+        &-instruction {
+            h4 {
+                font-size: 1.5rem;
+            }
+
+            h6 {
+                font-size: 1.3rem;
+            }
+        }
+    }   
+}

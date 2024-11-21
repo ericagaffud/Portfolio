@@ -1,0 +1,58 @@
+.container-image-link {
+  display: flex;
+  align-items: center;
+  margin-block: 2rem;
+  padding: 10px;
+  background-color: #f6f6f6;
+  text-align: center;
+  overflow: hidden;
+}
+.container-image-link img {
+  width: 100%;
+  cursor: pointer;
+}
+.container-image-link__tablet {
+  display: none;
+}
+.container-image-link__desktop {
+  display: none;
+}
+.container-instruction {
+  color: #f1f1f1;
+  text-align: center;
+}
+.container-instruction h4 {
+  font-weight: 700;
+}
+.container-instruction h4 span {
+  text-decoration: underline;
+  font-weight: 900;
+}
+.container-instruction h6 {
+  font-style: italic;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-image-link__mobile {
+    display: none;
+  }
+  .container-image-link__tablet {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container-image-link__tablet {
+    display: none;
+  }
+  .container-image-link__desktop {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1680px) {
+  .container-instruction h4 {
+    font-size: 1.5rem;
+  }
+  .container-instruction h6 {
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=food-galore.css.map */
