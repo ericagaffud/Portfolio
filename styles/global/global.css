@@ -240,6 +240,18 @@ button {
   text-transform: capitalize;
 }
 
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ascendUp {
+  to {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
 /********************END HEADER*****************/
 /* Loader */
 .backdrop {
@@ -277,16 +289,57 @@ button {
   }
 }
 /****************END LOADER******************/
-@keyframes slideDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/***************FIGMA IMAGE CONTAINER*************/
+.container-image-link {
+  display: flex;
+  align-items: center;
+  margin-block: 2rem;
+  padding: 10px;
+  background-color: #f6f6f6;
+  text-align: center;
+  overflow: hidden;
 }
-@keyframes ascendUp {
-  to {
-    transform: translateY(-30px);
-    opacity: 0;
+.container-image-link img {
+  width: 100%;
+  cursor: pointer;
+}
+.container-image-link__tablet {
+  display: none;
+}
+.container-image-link__desktop {
+  display: none;
+}
+.container-instruction {
+  color: var(--primary-color-tint);
+  text-align: center;
+  margin-top: 2rem;
+}
+.container-instruction h4 {
+  font-weight: 700;
+}
+.container-instruction h4 span {
+  text-decoration: underline;
+  font-weight: 900;
+  cursor: pointer;
+}
+.container-instruction h4 span:hover {
+  color: var(--tertiary-color-tint);
+  text-decoration: none;
+}
+.container-instruction h6 {
+  font-style: italic;
+}
+
+/***************END FIGMA CONTAINER***************/
+@media only screen and (min-width: 768px) {
+  .container-image-link {
+    padding: 1rem;
+  }
+  .container-image-link__mobile {
+    display: none;
+  }
+  .container-image-link__tablet {
+    display: block;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -306,6 +359,15 @@ button {
   .page-header {
     padding: 1rem;
   }
+  .container-image-link {
+    padding: 2rem;
+  }
+  .container-image-link__tablet {
+    display: none;
+  }
+  .container-image-link__desktop {
+    display: block;
+  }
 }
 @media only screen and (min-width: 1680px) {
   .page-header {
@@ -313,5 +375,11 @@ button {
   }
   .page-header div .page-title {
     font-size: 1.8rem;
+  }
+  .container-instruction h4 {
+    font-size: 1.5rem;
+  }
+  .container-instruction h6 {
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=global.css.map */
