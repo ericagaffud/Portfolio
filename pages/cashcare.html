@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <title>Erica Gaffud | Cash Care </title>
+    <link rel="stylesheet" href="../styles/global/global.css">
+    <link rel="stylesheet" href="../styles/cashcare/cashcare.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header" data-title="Cash Care"></div>
+        <div class="container-instruction">
+            <h4><span class="cashcare">Cash Care</span> is a budget tracker designed to help you take charge of your 
+                finances with ease and confidence. It empowers you to monitor spending, set savings goals, 
+                and achieve financial well-being by giving every peso a purpose.
+            </h4>
+            <h6>**Navigate through the prototype by clicking buttons from 'Get Started', menu tabs and tabs in Assets page.</h6>
+        </div>
+        <div class="container-image-link">
+            <img src="../assets/cashcare/cash-care-mobile.png" alt="Cash Care">
+        </div>
+    </div>
+    <div class="backdrop"></div>
+
+    <script src="../script/global.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.container-image-link img, .cashcare').on('click', function(){
+                $('.backdrop').css({'display': 'flex'})
+                $('.backdrop').load('../../components/loader.html');
+
+                setTimeout(() => {
+                    window.open('https://www.figma.com/proto/MCqpAC5wzsqNDOS4LTctH1/Budget-Tracker?node-id=9-127&node-type=frame&t=uFVtb2DueBgLKhAl-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A41', '_blank');
+                    $('.backdrop').hide();
+                }, 1000);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body {
+    background: #ffcfcf !important;
+}
+
+.container {
+    &-image-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent !important;
+
+        img{
+            max-width: 400px;
+        }
+    }
+}

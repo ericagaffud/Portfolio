@@ -1,0 +1,13 @@
+body {
+  background: #ffcfcf !important;
+}
+
+.container-image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+}
+.container-image-link img {
+  max-width: 400px;
+}/*# sourceMappingURL=cashcare.css.map */
