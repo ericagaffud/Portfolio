@@ -22,7 +22,7 @@
 }
 
 body {
-  background: linear-gradient(179.75deg, #0B1050 -10.75%, #C9004D 114.81%);
+  background: linear-gradient(181.63deg, #290439 -9.65%, #FF3381 113.22%), #E8E8E8;
   height: 100vh;
   width: 100vw;
   display: flex;

@@ -17,9 +17,15 @@ $(document).ready(function() {
             const imgBottom = imgTop + img.outerHeight();
 
             if (imgBottom > upperBound && imgTop < lowerBound) {
-                img.css('transform', 'scale(2.5)');
+                img.css({
+                    'transform': 'scale(2.5)',
+                    'opacity': '1'
+                });
             } else {
-                img.css('transform', 'scale(1)');
+                img.css({
+                    'transform': 'scale(1)',
+                    'opacity': '0.7'
+                });
             }
         });
     }

@@ -1,0 +1,23 @@
+.header {
+  position: sticky;
+  top: -40vh;
+  z-index: 100;
+}
+
+.container-work {
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  height: 90%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  gap: clamp(4rem, 1.325rem + 15.562vw, 20rem);
+  padding-inline: clamp(4rem, 2.997rem + 5.836vw, 10rem);
+}
+.container-work img {
+  width: clamp(8rem, 5.158rem + 16.535vw, 25rem);
+  cursor: pointer;
+}
+.container-work img:hover {
+  transform: scale(0.98);
+}/*# sourceMappingURL=work.css.map */
