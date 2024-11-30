@@ -23,12 +23,14 @@
 
     $(document).ready(function () {
         var pathSegments = window.location.pathname.split('/');
-        var currentPage = pathSegments[pathSegments.length - 1].replace('.html', '');
+        var currentPage = pathSegments.pop().replace('.html', '');
+        
         console.log("CURRENT PAGE: ", currentPage);
+
         $('.header--item').each(function () {
             var page = $(this).data('page');
 
-            if (currentPage === page) {
+            if ((currentPage === '' && page === '') || currentPage === page) {
                 $(this).addClass('active');
             } else {
                 $(this).removeClass('active');
