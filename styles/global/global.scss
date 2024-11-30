@@ -217,13 +217,15 @@ button {
     }
 
     .active {
-        background-color: var(--tertiary-color-shade);
-
         &::after {
             content: 'Active';
             color: #00FF44;
             margin-top: -10px;
         }
+    }
+
+    .first {
+        background-color: var(--tertiary-color-shade);
     }
 
     .second {

@@ -182,13 +182,13 @@ button {
 .header-menu--item:nth-child(4) {
   animation-delay: 0.7s;
 }
-.header-menu .active {
-  background-color: var(--tertiary-color-shade);
-}
 .header-menu .active::after {
   content: "Active";
   color: #00FF44;
   margin-top: -10px;
+}
+.header-menu .first {
+  background-color: var(--tertiary-color-shade);
 }
 .header-menu .second {
   background-color: #FF438A;
