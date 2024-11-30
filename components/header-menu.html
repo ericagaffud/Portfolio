@@ -36,6 +36,6 @@
         var portfolioWord = pathSegments[1] || '';
         var portfolio = portfolioWord == 'Portfolio' ? '/Portfolio' : '';
 
-        window.location.href = page == 'index' ? '/index.html' : portfolio + '/pages/' + page + '.html';
+        window.location.href = page == 'index' ? portfolio + '/index.html' : portfolio + '/pages/' + page + '.html';
     });
 </script>
