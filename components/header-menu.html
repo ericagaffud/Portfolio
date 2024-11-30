@@ -13,8 +13,10 @@
 <script>
     $(document).ready(function () {
         var pathSegments = window.location.pathname.split('/');
+        var portfolioWord = pathSegments[1] || '';
         var currentPage = pathSegments.pop().replace('.html', '');
-
+        
+        console.log("PORTFOLIO: ", portfolioWord);
         console.log("CURRENT PAGE: ", currentPage);
 
         $('.header-menu--item').each(function () {
@@ -30,6 +32,10 @@
 
     $('.header-menu--item').on('click', function() {
         var page = $(this).data('page');
-        window.location.href = page == 'index' ? '/index.html' : '/pages/' + page + '.html';
-    });    
+        var pathSegments = window.location.pathname.split('/');
+        var portfolioWord = pathSegments[1] || '';
+        var portfolio = portfolioWord == 'Portfolio' ? '/Portfolio' : '';
+
+        window.location.href = page == 'index' ? '/index.html' : portfolio + '/pages/' + page + '.html';
+    });
 </script>
