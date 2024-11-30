@@ -22,7 +22,8 @@
     });
 
     $(document).ready(function () {
-        var currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+        var pathSegments = window.location.pathname.split('/');
+        var currentPage = pathSegments[pathSegments.length - 1].replace('.html', '');
         console.log("CURRENT PAGE: ", currentPage);
         $('.header--item').each(function () {
             var page = $(this).data('page');
