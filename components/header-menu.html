@@ -1,4 +1,4 @@
-<div class="header-menu--item active" data-page="">
+<div class="header-menu--item first active" data-page="index">
     <h1> HOME </h1>
 </div>
 <div class="header-menu--item second" data-page="work">
@@ -11,9 +11,22 @@
     <h1> RESUME </h1>
 </div>
 <script>
-    $('.header-menu--item').on('click', function(){
+    $(document).ready(function () {
+        var currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+        console.log("CURRENT PAGE: ", currentPage);
+        $('.header-menu--item').each(function () {
+            var page = $(this).data('page');
+
+            if (currentPage === page) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+
+    $('.header-menu--item').on('click', function() {
         var page = $(this).data('page');
-        console.log(page);
-        window.location.href = page == '' ? '/index.html' : '/pages/' + page + '.html';
+        window.location.href = page == 'index' ? '/index.html' : '/pages/' + page + '.html';
     });    
 </script>

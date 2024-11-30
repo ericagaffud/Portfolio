@@ -3,7 +3,7 @@
     <i class="fa-solid fa-bars"></i>
 </div>
 <div class="header--items">
-    <div class="header--item active" data-page="">
+    <div class="header--item active" data-page="index">
         <h1> Home </h1>
     </div>
     <div class="header--item second" data-page="work">
@@ -21,9 +21,22 @@
         $('.header-menu').css("display", "grid");
     });
 
-    $('.header--item').on('click', function(){
+    $(document).ready(function () {
+        var currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+        console.log("CURRENT PAGE: ", currentPage);
+        $('.header--item').each(function () {
+            var page = $(this).data('page');
+
+            if (currentPage === page) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+
+    $('.header--item').on('click', function() {
         var page = $(this).data('page');
-        console.log(page);
-        window.location.href = page == '' ? '/index.html' : '/pages/' + page + '.html';
+        window.location.href = page == 'index' ? '/index.html' : '/pages/' + page + '.html';
     });  
 </script>
