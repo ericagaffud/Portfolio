@@ -18,9 +18,6 @@
     </div>
 </div>
 <script>
-    $('.header--button').on('click', function(){
-        $('.header-menu').css("display", "grid");
-    });
 
     $(document).ready(function () {
         var pathName = window.location.pathname.split('/');
@@ -30,6 +27,11 @@
         var url = title == 'Portfolio' ? '/Portfolio' : '';
         
         console.log("TITLE: ", url);
+
+        $('.header--button').on('click', function(){
+            $('.header-menu').css("display", "grid");
+            $('.header-page-menu').css("display", "grid");
+        });
 
         $('.header--item').each(function () {
             var page = $(this).data('page');

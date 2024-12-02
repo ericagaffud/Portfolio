@@ -48,7 +48,8 @@
 
                     $(this).css({
                         'display': 'flex',
-                        'height': '10rem'
+                        'height': 'auto',
+                        'width': '80%'
                     });
 
                     var clickedImage = $(this);
@@ -56,7 +57,10 @@
                         $('.logoDiv img').show();
                         $('.logoDiv').css('height', 'auto');
 
-                        clickedImage.css('height', originalHeight);
+                        clickedImage.css({
+                            'height': originalHeight,
+                            'width': 'auto'
+                        });
                     }, 3000);
 
                 })

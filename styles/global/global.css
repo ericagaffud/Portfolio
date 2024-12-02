@@ -135,6 +135,7 @@ button {
 }
 .header--button, .header-page--button {
   font-size: clamp(0.75rem, 0.471rem + 1.626vw, 1.25rem);
+  cursor: pointer;
 }
 .header--items, .header-page--items {
   display: none;
@@ -219,7 +220,7 @@ button {
 
 .page-header {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   background-color: #f6f6f6;
   border-radius: 5px;
@@ -228,6 +229,7 @@ button {
   top: 0;
   z-index: 1000;
   box-shadow: 4px 2px 4px #ffa6c8, inset 2px 2px 4px rgba(149, 149, 149, 0.5);
+  gap: 5px;
 }
 .page-header #backBtn {
   cursor: pointer;
@@ -239,6 +241,7 @@ button {
   font-weight: 600;
   color: var(--secondary-color);
   text-transform: capitalize;
+  font-size: clamp(1rem, 0.833rem + 0.973vw, 2rem);
 }
 
 @keyframes slideDown {
