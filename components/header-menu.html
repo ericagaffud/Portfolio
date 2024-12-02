@@ -12,12 +12,13 @@
 </div>
 <script>
     $(document).ready(function () {
-        var pathSegments = window.location.pathname.split('/');
-        var portfolioWord = pathSegments[1] || '';
-        var currentPage = pathSegments.pop().replace('.html', '');
+        var pathName = window.location.pathname.split('/');
+        var currentPage = pathName.pop().replace('.html', '');
+
+        var title = pathName.length == 1 ? '' : pathName[1];
+        var url = title == 'Portfolio' ? '/Portfolio' : '';
         
-        console.log("PORTFOLIO: ", portfolioWord);
-        console.log("CURRENT PAGE: ", currentPage);
+        console.log("TITLE: ", title);
 
         $('.header-menu--item').each(function () {
             var page = $(this).data('page');
@@ -32,10 +33,7 @@
 
     $('.header-menu--item').on('click', function() {
         var page = $(this).data('page');
-        var pathSegments = window.location.pathname.split('/');
-        var portfolioWord = pathSegments[1] || '';
-        var portfolio = portfolioWord == 'Portfolio' ? '/Portfolio' : '';
 
-        window.location.href = page == 'index' ? portfolio + '/index.html' : portfolio + '/pages/' + page + '.html';
+        window.location.href = page == 'index' ? url + '/index.html' : url + '/pages/' + page + '.html';
     });
 </script>
