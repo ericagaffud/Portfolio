@@ -33,6 +33,10 @@
     <script src="../script/global.js"></script>
     <script>
         $(document).ready(function () {
+            var pathName = window.location.pathname.split('/');
+            var title = pathName.length == 1 ? '' : pathName[1];
+            var url = title == 'Portfolio' ? '/Portfolio' : '';
+
             function autoScroll() {
                 const container = $('.container-work');
                 const scrollWidth = container[0].scrollWidth;
@@ -48,7 +52,7 @@
 
             $('.container img').on('click', function(){
                 var page = $(this).data('page');
-                window.location.href = '/pages/' + page + '.html';
+                window.location.href = url + '/pages/' + page + '.html';
             })
         });
     </script>
