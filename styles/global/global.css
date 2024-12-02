@@ -120,33 +120,33 @@ button {
 }
 
 /* Header */
-.header {
+.header, .header-page {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   color: #fff;
 }
-.header--name {
+.header--name, .header-page--name {
   font-family: "Cookie", cursive;
   font-weight: 400;
   font-style: normal;
 }
-.header--button {
+.header--button, .header-page--button {
   font-size: clamp(0.75rem, 0.471rem + 1.626vw, 1.25rem);
 }
-.header--items {
+.header--items, .header-page--items {
   display: none;
   cursor: pointer;
 }
-.header--items .active {
+.header--items .active, .header-page--items .active {
   border-bottom: 2px solid var(--tertiary-color);
 }
-.header--item :hover {
+.header--item :hover, .header-page--item :hover {
   transform: scale(0.96);
 }
 
-.header-menu {
+.header-menu, .header-page-menu {
   display: none;
   height: 100%;
   width: 100%;
@@ -155,7 +155,7 @@ button {
   left: 0;
   z-index: 1000;
 }
-.header-menu--item {
+.header-menu--item, .header-page-menu--item {
   width: 100vw;
   margin: 0;
   height: 100%;
@@ -167,36 +167,36 @@ button {
   transform: translateY(-30px);
   animation: slideDown 0.6s ease forwards;
 }
-.header-menu--item h1 {
+.header-menu--item h1, .header-page-menu--item h1 {
   color: #fff;
 }
-.header-menu--item:nth-child(1) {
+.header-menu--item:nth-child(1), .header-page-menu--item:nth-child(1) {
   animation-delay: 0.1s;
 }
-.header-menu--item:nth-child(2) {
+.header-menu--item:nth-child(2), .header-page-menu--item:nth-child(2) {
   animation-delay: 0.3s;
 }
-.header-menu--item:nth-child(3) {
+.header-menu--item:nth-child(3), .header-page-menu--item:nth-child(3) {
   animation-delay: 0.5s;
 }
-.header-menu--item:nth-child(4) {
+.header-menu--item:nth-child(4), .header-page-menu--item:nth-child(4) {
   animation-delay: 0.7s;
 }
-.header-menu .active::after {
+.header-menu .active::after, .header-page-menu .active::after {
   content: "Active";
   color: #00FF44;
   margin-top: -10px;
 }
-.header-menu .first {
+.header-menu .first, .header-page-menu .first {
   background-color: var(--tertiary-color-shade);
 }
-.header-menu .second {
+.header-menu .second, .header-page-menu .second {
   background-color: #FF438A;
 }
-.header-menu .third {
+.header-menu .third, .header-page-menu .third {
   background-color: #FF74A9;
 }
-.header-menu .fourth {
+.header-menu .fourth, .header-page-menu .fourth {
   background-color: #FFA6C8;
 }
 

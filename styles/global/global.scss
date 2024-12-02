@@ -138,7 +138,7 @@ button {
 }
 
 /* Header */
-.header {
+.header, .header-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,7 +172,7 @@ button {
 
 }
 
-.header-menu {
+.header-menu, .header-page-menu {
     display: none;
     height: 100%;
     width: 100%;
