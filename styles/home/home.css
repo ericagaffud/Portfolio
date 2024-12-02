@@ -12,7 +12,7 @@
   top: -40vh;
   z-index: 100;
 }
-.container img {
+.container > img {
   width: 6rem;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -23,7 +23,7 @@
   .container {
     gap: clamp(13rem, 11.714rem + 2.679vw, 16rem);
   }
-  .container img {
+  .container > img {
     width: clamp(8rem, 7.143rem + 1.786vw, 10rem);
   }
 }/*# sourceMappingURL=home.css.map */

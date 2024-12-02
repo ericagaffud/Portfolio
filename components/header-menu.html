@@ -18,7 +18,7 @@
         var title = pathName.length == 1 ? '' : pathName[1];
         var url = title == 'Portfolio' ? '/Portfolio' : '';
         
-        console.log("TITLE: ", title);
+        console.log("TITLE: ", url);
 
         $('.header-menu--item').each(function () {
             var page = $(this).data('page');
@@ -29,11 +29,10 @@
                 $(this).removeClass('active');
             }
         });
-    });
 
-    $('.header-menu--item').on('click', function() {
-        var page = $(this).data('page');
-
-        window.location.href = page == 'index' ? url + '/index.html' : url + '/pages/' + page + '.html';
+        $('.header-menu--item').on('click', function() {
+            var page = $(this).data('page');
+            window.location.href = page == 'index' ? url + '/index.html' : url + '/pages/' + page + '.html';
+        });
     });
 </script>

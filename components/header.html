@@ -1,4 +1,5 @@
-<h1 class="header--name"> Erica Gaffud </h1>
+<!-- <h1 class="header--name"> Erica Gaffud </h1> -->
+<img src="../assets/logo_name.png" class="header--name">
 <div class="header--button">
     <i class="fa-solid fa-bars"></i>
 </div>
@@ -29,7 +30,6 @@
         var url = title == 'Portfolio' ? '/Portfolio' : '';
         
         console.log("TITLE: ", url);
-        
 
         $('.header--item').each(function () {
             var page = $(this).data('page');
@@ -43,7 +43,6 @@
 
         $('.header--item').on('click', function() {
             var page = $(this).data('page');
-
             window.location.href = page == 'index' ? url + '/index.html' : url + '/pages/' + page + '.html';
         });
     });
