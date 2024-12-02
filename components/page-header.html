@@ -7,12 +7,17 @@
 </div>
 <div></div>
 <script>
+    var pathName = window.location.pathname.split('/');
+    var title = pathName.length == 1 ? '' : pathName[1];
+    var url = title == 'Portfolio' ? '/Portfolio' : '';
+    
+    console.log("TITLE: ", url);
+
     $('#backBtn').on('click', function(){
         window.location.href = '/';
     });
 
     var title = $('.page-header').data('title');
-    console.log(title);
 
     $('.page-title').html(title);
 </script>
