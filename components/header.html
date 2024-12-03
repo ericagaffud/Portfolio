@@ -1,5 +1,5 @@
 <!-- <h1 class="header--name"> Erica Gaffud </h1> -->
-<img src="../assets/logo_name.png" class="header--name">
+<img src="" class="header--name">
 <div class="header--button">
     <i class="fa-solid fa-bars"></i>
 </div>
@@ -27,6 +27,9 @@
         var url = title == 'Portfolio' ? '/Portfolio' : '';
         
         console.log("TITLE: ", url);
+
+        var src = $('.header').data('image') || $('.header-page').data('image');
+        $('.header--name').attr('src', src);
 
         $('.header--button').on('click', function(){
             $('.header-menu').css("display", "grid");
