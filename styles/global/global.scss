@@ -3,7 +3,6 @@
     --primary-color-shade: #00021d;
     --primary-color-tint: #0b1050;
 
-
     --secondary-color: #3F0071;
     --secondary-color-shade: #2e0053;
     --secondary-color-tint: #5f04a8;
@@ -345,6 +344,9 @@ button {
 
 /***************FIGMA IMAGE CONTAINER*************/
 .container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
     &-image-link {
         display: flex;
         align-items: center;
@@ -392,6 +394,10 @@ button {
             font-style: italic;
         }
     }
+}
+
+.container::-webkit-scrollbar {
+    display: none;
 }
 
 /***************END FIGMA CONTAINER***************/
