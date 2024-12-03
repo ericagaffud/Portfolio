@@ -11,6 +11,8 @@
     height: 90%;
     overflow-x: scroll;
     scrollbar-width: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     gap: clamp(4rem, 1.325rem + 15.562vw, 20rem);
     padding-inline: clamp(4rem, 2.997rem + 5.836vw, 10rem);
 
@@ -22,4 +24,8 @@
     img:hover {
         transform: scale(0.98);
     }
+}
+
+.container-work::-webkit-scrollbar {
+    display: none;
 }
