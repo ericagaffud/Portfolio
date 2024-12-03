@@ -294,6 +294,10 @@ button {
 }
 /****************END LOADER******************/
 /***************FIGMA IMAGE CONTAINER*************/
+.container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .container-image-link {
   display: flex;
   align-items: center;
@@ -332,6 +336,10 @@ button {
 }
 .container-instruction h6 {
   font-style: italic;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 /***************END FIGMA CONTAINER***************/

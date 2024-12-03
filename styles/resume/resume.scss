@@ -1,0 +1,29 @@
+.container-cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    padding: clamp(0.625rem, 0.521rem + 0.608vw, 1.25rem);
+    background-color: #f6f6f6;
+    text-align: center;
+    overflow: hidden;
+    max-width: 34rem;
+
+    img {
+        width: clamp(12rem, 9.325rem + 15.562vw, 28rem);
+        margin: auto;
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: clamp(0.9rem, 0.816rem + 0.486vw, 1.4rem);
+        color: #f6f6f6;
+        background-color: var(--tertiary-color-shade);
+        padding-block: 0.3rem;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: clamp(0.625rem, 0.521rem + 0.608vw, 1.25rem);
+        width: clamp(12rem, 9.325rem + 15.562vw, 28rem);
+    }
+}
