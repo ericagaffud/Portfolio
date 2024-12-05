@@ -40,7 +40,17 @@ body {
   border: none;
   border-radius: 10px;
   padding: 5px 30px;
+  margin-bottom: 20px;
   cursor: pointer;
+}
+.ams-container .ams-prototype-btn {
+  text-decoration: none;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 5px 30px;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  box-shadow: 1px 2px 5px var(--primary-color-tint);
 }
 
 .tooltip {
@@ -74,7 +84,7 @@ body {
     font-size: clamp(1.1rem, 0.714rem + 0.804vw, 2rem);
     cursor: pointer;
   }
-  .ams-container .ams-btn {
+  .ams-container .ams-btn, .ams-container .ams-prototype-btn {
     font-size: clamp(1.1rem, 0.714rem + 0.804vw, 2rem);
   }
 }/*# sourceMappingURL=ams.css.map */

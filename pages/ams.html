@@ -32,8 +32,9 @@
             <h4 class="font-style"> guest_benefactor <i class="fas fa-clone"></i></h4>
             <br>
             <h6 class="title"> Password </h6>
-            <h4 class="font-style"> Accidentm0nit0ring0621! <i class="fas fa-clone"></i></h4><br><br>
+            <h4 class="font-style"> Accidentm0nit0ring0621! <i class="fas fa-clone"></i></h4><br>
             <a class="ams-btn">Go to Website</a>
+            <a class="ams-prototype-btn">Go to Prototype</a>
         </div>
     </div>
     <div class="backdrop"></div>
@@ -47,6 +48,16 @@
 
                 setTimeout(() => {
                     window.open('https://ericagaffud.github.io/Accident-Monitoring-System/', '_blank');
+                    $('.backdrop').hide();
+                }, 1000);
+            });
+
+            $('.ams-prototype-btn').on('click', function(){
+                $('.backdrop').css({'display': 'flex'})
+                $('.backdrop').load('../components/loader.html');
+
+                setTimeout(() => {
+                    window.open('https://www.figma.com/proto/bFlewnXHbnP2Jts0aVD4vj/Erica-Gaffud-IXD?node-id=90-2&node-type=frame&t=ERuC7nNVCVU5NekK-0&scaling=min-zoom&content-scaling=fixed&page-id=88%3A5&starting-point-node-id=90%3A2', '_blank');
                     $('.backdrop').hide();
                 }, 1000);
             });
