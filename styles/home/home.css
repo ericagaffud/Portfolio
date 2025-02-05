@@ -19,6 +19,55 @@
   background-color: var(--primary-color);
   margin-left: 5px;
 }
+.container .header-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80vw;
+  list-style: none;
+  background-color: var(--accent-color);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 2.09rem + 4.552vw, 5rem);
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.container .header-nav-close {
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+}
+.container .header-nav-item {
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  font-size: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+}
+.container .header-nav-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.container .header-nav-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.container .header-nav-item:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.container .header-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
 .container .header > div {
   display: flex;
   align-items: center;
@@ -30,6 +79,9 @@
 .container .header > div i {
   font-size: clamp(1rem, 0.772rem + 1.138vw, 1.5rem);
   color: var(--primary-color);
+}
+.container .active-nav {
+  transform: translateX(0);
 }
 .container .body-intro {
   padding-block: clamp(3rem, 2.545rem + 2.276vw, 4rem);
@@ -114,6 +166,31 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .container .header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .container .header-nav {
+    transform: translateX(0);
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    position: relative;
+    background-color: transparent;
+  }
+  .container .header-nav-item {
+    color: var(--primary-color);
+  }
+  .container .header-nav-close {
+    display: none;
+  }
+  .container .header > div {
+    justify-content: end;
+  }
+  .container .header-menu {
+    display: none;
+  }
   .container .body {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
@@ -173,5 +250,14 @@
   .container .body-footer-info h4 {
     font-size: clamp(1.2rem, 0.857rem + 0.402vw, 1.5rem);
     padding-block: clamp(0.625rem, 0.339rem + 0.335vw, 0.875rem);
+  }
+}
+/* Keyframes [ANIMATION]*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }/*# sourceMappingURL=home.css.map */

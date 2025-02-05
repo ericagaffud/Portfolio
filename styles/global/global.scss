@@ -62,15 +62,10 @@
 }
 
 body {
-    
+    overflow-x: hidden;
 }
 
 .container {
-    // width: 80vw;
-    // height: 80vh;
-    // overflow-y: scroll;
-    // scrollbar-width: none;
-    // -ms-overflow-style: none;
 }
 
 button {
@@ -200,94 +195,6 @@ button {
         }
     }
 
-}
-
-.header-menu, .header-page-menu {
-    display: none;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    z-index: 1000;
-
-    &--item {
-        width: 100vw;
-        margin: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        opacity: 0;
-        transform: translateY(-30px);
-        animation: slideDown 0.6s ease forwards;
-
-        h1 {
-            color: #fff;
-        }
-
-        &:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        
-        &:nth-child(2) {
-            animation-delay: 0.3s;
-        }
-        
-        &:nth-child(3) {
-            animation-delay: 0.5s;
-        }
-        
-        &:nth-child(4) {
-            animation-delay: 0.7s;
-        }
-    }
-
-    .active {
-        &::after {
-            content: 'Active';
-            color: #00FF44;
-            margin-top: -10px;
-        }
-    }
-
-    .first {
-        background-color: var(--tertiary-color-shade);
-    }
-
-    .second {
-        background-color: #FF438A;
-    }
-
-    .third {
-        background-color: #FF74A9;
-    }
-
-    .fourth {
-        background-color: #FFA6C8;
-    }
-}
-
-.ascending {
-    .header-menu--item {
-        animation: ascendUp 1s ease forwards;
-
-        &:nth-child(1) {
-            animation-delay: 0.7s;
-        }
-        &:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-        &:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-        &:nth-child(4) {
-            animation-delay: 0.1s;
-        }
-    }
 }
 
 .page-header {

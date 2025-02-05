@@ -20,9 +20,16 @@
     <div class="container">
         <div class="header">
             <h2>Erica</h2>
+            <ul class="header-nav">
+                <span class="header-nav-close">&#128473;</span>
+                <li class="header-nav-item">About</li>
+                <li class="header-nav-item">Contact</li>
+                <li class="header-nav-item">Work</li>
+            </ul>
+            <span class="header-overlay"></span>
             <div>
                 <button class="primary_btn_outline"> Let's Chat </button>
-                <div>
+                <div id="headerMenu" class="header-menu">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
@@ -68,9 +75,14 @@
     <script src="./script/global.js"></script>
     <script src="./script/animation.js"></script>
     <script>
-        $('.container img').on('click', function(){
-            var page = $(this).data('page');
-            window.location.href = 'pages/' + page + '.html';
+        $('#headerMenu').on('click', function(){
+            $('.header-nav').addClass('active-nav');
+            $('.header-overlay').css('display', 'block');
+        });
+
+        $('.header-nav-close').on('click', function(){
+            $('.header-nav').removeClass('active-nav');
+            $('.header-overlay').css('display', 'none');
         })
     </script>
 </body>
