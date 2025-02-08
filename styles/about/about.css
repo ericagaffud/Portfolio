@@ -1,129 +1,269 @@
-.header {
-  position: sticky;
-  top: -40vh;
-  z-index: 100;
+:root {
+  --margin-inline: clamp(1rem, -1.276rem + 11.38vw, 6rem);
 }
 
-.container-about {
+.body-about {
+  padding-block: clamp(3rem, 2.545rem + 2.276vw, 4rem);
+}
+.body-about__hero {
+  margin-inline: var(--margin-inline);
+}
+.body-about__hero img {
+  width: 100%;
+  max-width: 25rem;
+  margin: auto;
+  display: flex;
+}
+.body-about__hero h1 {
+  font-size: clamp(2rem, 1.09rem + 4.552vw, 4rem);
+  font-weight: 800;
   margin-top: 1rem;
 }
-.container-about--info {
-  width: 100%;
-  height: 50vh;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  padding: 1rem 1rem 5rem 1rem;
-  background-color: #232730;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3098039216);
-  border-radius: 10px;
-  box-shadow: 1px 2px 10px #252525;
+.body-about__hero h3 {
+  margin-block: 1rem 3rem;
+  letter-spacing: 0.04em;
+  line-height: 149.42%;
+  font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
 }
-.container-about--info h2 {
-  font-size: clamp(1.5rem, 1.416rem + 0.486vw, 2rem);
-  font-weight: bold;
-  line-height: 1.5rem;
-  margin-bottom: 0.5rem;
+.body-about__mycareer {
+  background: rgba(216, 182, 164, 0.4);
+  text-align: center;
+  padding-inline: var(--margin-inline);
+  padding-block: clamp(2rem, 1.317rem + 3.414vw, 3.5rem);
 }
-.container-about--info div {
-  margin-bottom: 1.5rem;
+.body-about__mycareer h1 {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 1.09rem + 4.552vw, 4rem);
+  font-weight: 800;
 }
-.container-about--info div .info {
-  font-weight: bold;
+.body-about__mycareer h3 {
+  margin-block: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+  letter-spacing: 0.04em;
+  line-height: 149.42%;
+  font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
 }
-.container-about--info div h4 {
-  line-height: 1.2rem;
-  color: var(--tertiary-color-tint);
-  font-size: clamp(1.1rem, 1.016rem + 0.486vw, 1.6rem);
-}
-.container-about--info div h6 {
-  font-size: clamp(0.7rem, 0.616rem + 0.486vw, 1.2rem);
-}
-.container-about--info div div {
-  background-color: #f7f7f7;
-  margin-block: 10px;
-  padding: 10px;
-  color: #000;
-  border-radius: 10px;
-}
-.container-about--info div div p {
-  font-size: clamp(0.9rem, 0.816rem + 0.486vw, 1.4rem);
-  margin-bottom: 5px;
-}
-.container-about--info div div p:not(:last-child) {
-  border-bottom: 1px solid #d7d7d7;
-}
-.container-about--profile {
+.body-about__mycareer__content {
   display: flex;
-  flex-direction: column-reverse;
-  text-align: right;
-  margin-top: -6rem;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 0.25rem + 0.391vw, 0.875rem);
 }
-.container-about--profile h1 {
-  font-weight: bold;
-  font-size: clamp(1.3rem, 1.021rem + 1.626vw, 1.8rem);
-  letter-spacing: -1px;
+.body-about__mycareer__content span {
+  border: 1px solid var(--primary-color);
+  padding: 2px 10px;
+  border-radius: 5px;
+  color: var(--primary-color);
+  font-weight: bolder;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
+}
+.body-about__quote {
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--accent-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-block: clamp(8rem, 6.179rem + 9.104vw, 12rem);
+  margin-inline: var(--margin-inline);
+}
+.body-about__quote h1 {
+  font-size: clamp(1.5rem, 1.045rem + 2.276vw, 2.5rem);
+}
+.body-about__experiences {
+  display: flex;
+  flex-direction: column;
+  margin-inline: var(--margin-inline);
+}
+.body-about__experiences h1 {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 1.09rem + 4.552vw, 4rem);
+  margin-bottom: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+}
+.body-about__experiences--container {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  gap: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+}
+.body-about__experiences--container-date {
+  width: clamp(3rem, 2.09rem + 4.552vw, 5rem);
+}
+.body-about__experiences--container-date h4 {
+  font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
+}
+.body-about__experiences--container-content {
+  padding-left: clamp(1rem, 0.09rem + 4.552vw, 3rem);
+  border-left: 1px solid var(--accent-color);
+  position: relative;
+}
+.body-about__experiences--container-content::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  position: absolute;
+  top: 0;
+  left: -0.3rem;
+}
+.body-about__experiences--container-content h3 {
+  font-weight: 800;
+  font-size: clamp(1rem, 0.772rem + 1.138vw, 1.5rem);
+}
+.body-about__experiences--container-content h4 {
+  font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
+}
+.body-about__experiences--container-content h4:last-of-type {
+  margin-bottom: clamp(2rem, 1.545rem + 2.276vw, 3rem);
+}
+.body-about__education {
+  position: relative;
+}
+.body-about__education__info {
+  padding-inline: var(--margin-inline);
+  width: 90%;
+  margin-block: clamp(7rem, 4.724rem + 11.38vw, 12rem);
+}
+.body-about__education__info h1 {
+  font-size: clamp(1.5rem, 1.045rem + 2.276vw, 2.5rem);
+  font-weight: 800;
+}
+.body-about__education__info h2 {
+  font-size: clamp(1rem, 0.772rem + 1.138vw, 1.5rem);
+}
+.body-about__education__quote {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+}
+.body-about__education__quote h3 {
   color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 149.42%;
+  font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
 }
-.container-about--profile img {
-  width: 12rem;
-  margin-left: auto;
+.body-about__education img {
+  position: absolute;
+  width: clamp(12rem, 6.083rem + 29.587vw, 25rem);
+  bottom: 2rem;
+  right: 0;
+  z-index: -1;
+  opacity: 0.4;
+  transform: translateX(60px);
+}
+.body-about__proficiency {
+  margin-inline: var(--margin-inline);
+  padding-block-start: clamp(2rem, 1.317rem + 3.414vw, 3.5rem);
+}
+.body-about__proficiency h1 {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 1.09rem + 4.552vw, 4rem);
+  margin-bottom: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+  text-align: center;
+}
+.body-about__proficiency div {
+  display: grid;
+  gap: 1rem;
+  margin-block: clamp(1rem, 0.09rem + 4.552vw, 3rem);
+  place-items: center;
+}
+.body-about__proficiency div img {
+  width: clamp(3rem, 1.634rem + 6.828vw, 6rem);
+}
+.body-about__proficiency div:nth-child(2),
+.body-about__proficiency div:nth-child(3),
+.body-about__proficiency div:nth-child(4) {
+  grid-template-columns: repeat(3, 1fr);
+}
+.body-about__proficiency div:nth-child(5) {
+  grid-template-columns: repeat(2, 1fr);
 }
 
-@media only screen and (min-width: 768px) {
-  .container-about--info {
-    padding: 2rem 2rem 5rem 2rem;
+@media screen and (min-width: 1024px) {
+  :root {
+    --margin-inline: clamp(6rem, 0.667rem + 8.333vw, 14rem);
   }
-  .container-about--info div div {
-    padding: clamp(1.5rem, 0.929rem + 0.893vw, 2rem);
+  .body-about__hero {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    padding-block: clamp(5rem, 1.667rem + 5.208vw, 10rem);
+    gap: clamp(2rem, -0.667rem + 4.167vw, 6rem);
   }
-  .container-about--profile {
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: end;
-    margin-top: -8rem;
+  .body-about__hero img {
+    width: clamp(22rem, 13.333rem + 13.542vw, 35rem);
+    max-width: 35rem;
   }
-  .container-about--profile h1 {
-    font-size: clamp(2rem, 0.494rem + 3.137vw, 2.5rem);
-  }
-  .container-about--profile img {
-    margin-left: 0;
-    width: 14rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  body {
-    position: relative;
-  }
-  .container-about {
-    margin-top: 3rem;
-  }
-  .container-about--info {
-    width: clamp(38rem, 3.714rem + 53.571vw, 68rem);
-    height: 55vh;
-    padding: clamp(2.5rem, 1.929rem + 0.893vw, 3rem) clamp(2.5rem, -0.357rem + 4.464vw, 5rem);
-  }
-  .container-about--info h2 {
-    line-height: normal;
-  }
-  .container-about--info div .info {
-    line-height: normal;
-  }
-  .container-about--info div div p {
-    margin-bottom: 10px;
-  }
-  .container-about--profile {
-    margin-top: clamp(2rem, 0.857rem + 1.786vw, 3rem);
+  .body-about__hero div {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 70%;
   }
-  .container-about--profile img {
-    width: clamp(23rem, 15rem + 12.5vw, 30rem);
-    position: absolute;
-    bottom: 0;
-    right: clamp(0rem, -5.714rem + 8.929vw, 5rem);
+  .body-about__hero h1 {
+    font-size: clamp(3.5rem, 2.5rem + 1.563vw, 5rem);
   }
-  .container-about--profile h1 {
-    font-size: clamp(2.5rem, 1.357rem + 1.786vw, 3.5rem);
+  .body-about__hero h3 {
+    line-height: 190%;
+  }
+  .body-about__mycareer {
+    display: flex;
+    gap: clamp(2rem, -0.667rem + 4.167vw, 6rem);
+    text-align: start;
+    align-items: start;
+    padding-block: clamp(5rem, -5rem + 15.625vw, 20rem);
+  }
+  .body-about__mycareer__info h1 {
+    font-size: clamp(3.5rem, 2.5rem + 1.563vw, 5rem);
+  }
+  .body-about__mycareer__content {
+    text-align: center;
+  }
+  .body-about__mycareer__content span {
+    align-items: center;
+  }
+  .body-about__quote {
+    padding-block: clamp(5rem, -11.667rem + 26.042vw, 30rem);
+  }
+  .body-about__quote h1 {
+    font-size: clamp(3.5rem, 2.5rem + 1.563vw, 5rem);
+  }
+  .body-about__experiences {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+  .body-about__experiences h1 {
+    grid-row: 1/span 3;
+    font-size: clamp(2.5rem, 0.833rem + 2.604vw, 5rem);
+  }
+  .body-about__education__info {
+    margin-block: clamp(14rem, 10rem + 6.25vw, 20rem);
+  }
+  .body-about__education__info h1 {
+    font-size: clamp(3rem, 1.667rem + 2.083vw, 5rem);
+  }
+  .body-about__education__info h2 {
+    font-size: clamp(1.8rem, 1.333rem + 0.729vw, 2.5rem);
+  }
+  .body-about__education__quote {
+    padding: clamp(2rem, 1rem + 1.563vw, 3.5rem);
+  }
+  .body-about__education__quote h3 {
+    font-size: clamp(1.5rem, 0.833rem + 1.042vw, 2.5rem);
+  }
+  .body-about__education img {
+    width: clamp(25rem, 11.667rem + 20.833vw, 45rem);
+  }
+  .body-about__proficiency div {
+    margin-block: clamp(4rem, 2rem + 3.125vw, 7rem);
+  }
+  .body-about__proficiency div img {
+    width: clamp(6rem, 4rem + 3.125vw, 9rem);
+  }
+  .body-about__proficiency div:nth-child(2) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .body-about__proficiency div:nth-child(3),
+  .body-about__proficiency div:nth-child(4) {
+    grid-template-columns: repeat(5, 1fr);
   }
 }/*# sourceMappingURL=about.css.map */

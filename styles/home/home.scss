@@ -1,4 +1,5 @@
 .container {
+    overflow-y: hidden;
     .header {
         display: flex;
         justify-content: space-between;
@@ -100,7 +101,7 @@
     .active-nav {
         transform: translateX(0);
     }
-
+    
     .body {
 
         &-intro {
