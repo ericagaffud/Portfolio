@@ -130,6 +130,9 @@
 
             .active-item {
                 border-bottom: 2px solid var(--primary-color);
+                color: var(--primary-color);
+                text-transform: none;
+                transform: scale(1);
             }
 
             &-close {

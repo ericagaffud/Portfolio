@@ -6,7 +6,7 @@
     </h3>
     <div class="body-intro-buttons">
         <button class="primary_btn"> Hire Me </button>
-        <button class="primary_link"> 
+        <button id="gotoWork" class="primary_link"> 
             Project
             <img src="./assets/icons/expand-icon.png" alt="">
         </button>
@@ -17,7 +17,7 @@
 </div>
 <div class="body-footer">
     <div class="body-footer-quicklinks">
-        <button class="primary_link">
+        <button id="gotoAbout" class="primary_link">
             <img src="./assets/icons/about-icon.png" alt="Know More About Me icon">
             Know More About Me
         </button>
@@ -32,3 +32,22 @@
         <h4>Prototype <span>43</span></h4>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $(document).on('click', '#gotoWork', function(){
+            $('.header-nav-item').removeClass('active-item');
+            $('.header-nav-item[data-page="Work"]').addClass('active-item');
+
+            $('.body, .body-about, .body-work').hide();
+            $('#bodyWork').show();
+        });
+
+        $(document).on('click', '#gotoAbout', function(){
+            $('.header-nav-item').removeClass('active-item');
+            $('.header-nav-item[data-page="About"]').addClass('active-item');
+
+            $('.body, .body-about, .body-work').hide();
+            $('#bodyAbout').show();
+        });
+    });
+</script>
