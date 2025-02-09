@@ -1,153 +1,62 @@
-.container {
-  overflow-y: hidden;
-}
-.container .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  color: #fff;
-  border-bottom: 1px solid var(--tertiary-color);
-  padding: clamp(1rem, 0.772rem + 1.138vw, 1.5rem) clamp(1rem, -1.276rem + 11.38vw, 6rem);
-}
-.container .header h2 {
-  font-size: clamp(1.5rem, 1.286rem + 1.071vw, 3rem);
-}
-.container .header h2::after {
-  content: "";
-  display: inline-block;
-  height: clamp(0.625rem, 0.483rem + 0.711vw, 0.938rem);
-  width: clamp(0.625rem, 0.483rem + 0.711vw, 0.938rem);
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  margin-left: 5px;
-}
-.container .header-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 80vw;
-  list-style: none;
-  background-color: var(--accent-color);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(3rem, 2.09rem + 4.552vw, 5rem);
-  justify-content: center;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
-.container .header-nav-close {
-  color: #fff;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 1.5rem;
-}
-.container .header-nav-item {
-  color: #fff;
-  cursor: pointer;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  font-size: clamp(1rem, 0.545rem + 2.276vw, 2rem);
-  font-weight: 700;
-}
-.container .header-nav-item:nth-child(2) {
-  animation-delay: 0.3s;
-}
-.container .header-nav-item:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.container .header-nav-item:nth-child(4) {
-  animation-delay: 0.9s;
-}
-.container .header-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
-}
-.container .header > div {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.container .header > div button {
-  font-size: clamp(0.75rem, 0.636rem + 0.569vw, 1rem);
-  background-color: transparent;
-  border-radius: 15px;
-}
-.container .header > div i {
-  font-size: clamp(1rem, 0.772rem + 1.138vw, 1.5rem);
-  color: var(--primary-color);
-}
-.container .active-nav {
-  transform: translateX(0);
-}
-.container .body-intro {
+.body-intro {
   padding-block: clamp(3rem, 2.545rem + 2.276vw, 4rem);
   margin-inline: clamp(1rem, -1.276rem + 11.38vw, 6rem);
 }
-.container .body-intro h1 {
+.body-intro h1 {
   font-size: clamp(2rem, 1.09rem + 4.552vw, 4rem);
 }
-.container .body-intro h3 {
+.body-intro h3 {
   margin-block: clamp(1rem, 0.545rem + 2.276vw, 2rem);
   letter-spacing: 0.04em;
   line-height: 149.42%;
   font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
   max-width: 26rem;
 }
-.container .body-intro h3 span {
+.body-intro h3 span {
   font-weight: bold;
 }
-.container .body-intro-buttons {
+.body-intro-buttons {
   display: flex;
   gap: clamp(0.625rem, 0.056rem + 2.845vw, 1.875rem);
 }
-.container .body-intro-buttons button {
+.body-intro-buttons button {
   padding: 10px 30px;
   font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
 }
-.container .body-intro-buttons .primary_link {
+.body-intro-buttons .primary_link {
   color: var(--accent-color);
   font-weight: 700;
   padding: 10px;
   display: flex;
   gap: 5px;
 }
-.container .body-intro-buttons .primary_link img {
+.body-intro-buttons .primary_link img {
   width: clamp(0.7rem, 0.472rem + 1.138vw, 1.2rem);
 }
-.container .body-image {
+.body-image {
   width: 100%;
   height: clamp(18.75rem, 10.215rem + 42.674vw, 37.5rem);
   overflow: hidden;
 }
-.container .body-image img {
+.body-image img {
   width: 100%;
   height: 120%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.container .body-footer {
+.body-footer {
   display: flex;
   flex-direction: column-reverse;
   gap: 1rem;
   background-color: var(--accent-color);
   padding: clamp(2rem, 0.634rem + 6.828vw, 5rem);
 }
-.container .body-footer-quicklinks {
+.body-footer-quicklinks {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.container .body-footer-quicklinks .primary_link {
+.body-footer-quicklinks .primary_link {
   color: var(--accent-color);
   font-weight: 700;
   font-size: clamp(1rem, 0.772rem + 1.138vw, 1.5rem);
@@ -156,10 +65,10 @@
   display: flex;
   gap: clamp(0.313rem, 0.028rem + 1.422vw, 0.938rem);
 }
-.container .body-footer-quicklinks .primary_link img {
+.body-footer-quicklinks .primary_link img {
   width: clamp(1rem, 0.545rem + 2.276vw, 2rem);
 }
-.container .body-footer-info h4 {
+.body-footer-info h4 {
   display: flex;
   justify-content: space-between;
   color: #fff;
@@ -167,116 +76,69 @@
   border-bottom: 1px solid #fff;
   font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
 }
-.container .body-footer-info h4 span {
+.body-footer-info h4 span {
   color: #fff;
 }
 
 @media screen and (min-width: 1024px) {
-  .container .header {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 1rem;
-    justify-content: space-between;
-  }
-  .container .header-nav {
-    transform: translateX(0);
-    height: auto;
-    width: auto;
-    flex-direction: row;
-    position: relative;
-    background-color: transparent;
-  }
-  .container .header-nav-item {
-    color: var(--primary-color);
-    font-size: clamp(1rem, 0.667rem + 0.521vw, 1.5rem);
-  }
-  .container .header-nav-close {
-    display: none;
-  }
-  .container .header > div {
-    justify-content: end;
-  }
-  .container .header > div button {
-    font-size: clamp(1rem, 0.667rem + 0.521vw, 1.5rem);
-    border: 2px solid var(--primary-color);
-    font-weight: 700;
-  }
-  .container .header-menu {
-    display: none;
-  }
-  .container .body {
+  .body {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
   }
-  .container .body-intro h1 {
+  .body-intro h1 {
     font-size: clamp(3rem, 0.714rem + 3.571vw, 5rem);
   }
-  .container .body-intro h3 {
+  .body-intro h3 {
     font-size: clamp(1.25rem, 0.964rem + 0.446vw, 1.5rem);
     max-width: 32rem;
   }
-  .container .body-intro-buttons button {
+  .body-intro-buttons button {
     padding: 10px 40px;
     font-size: clamp(1.25rem, 0.964rem + 0.446vw, 1.5rem);
   }
-  .container .body-footer {
+  .body-footer {
     grid-area: 2/1/3/3;
     padding: clamp(2rem, 0.857rem + 1.786vw, 3rem) clamp(1rem, -1.276rem + 11.38vw, 6rem);
   }
-  .container .body-footer-quicklinks .primary_link {
+  .body-footer-quicklinks .primary_link {
     font-size: clamp(1.4rem, 1.133rem + 0.417vw, 1.8rem);
   }
-  .container .body-footer-info h4 {
+  .body-footer-info h4 {
     font-size: clamp(1.25rem, 0.964rem + 0.446vw, 1.5rem);
   }
 }
 @media screen and (min-width: 1366px) {
-  .container .header {
-    grid-template-columns: 4fr 2fr 1fr;
-  }
-  .container .header-nav {
-    gap: clamp(4rem, -2.864rem + 8.04vw, 10rem);
-  }
-  .container .body-intro {
+  .body-intro {
     padding-block: clamp(6rem, -0.864rem + 8.04vw, 12rem);
   }
-  .container .body-intro h3 {
+  .body-intro h3 {
     font-size: clamp(1.2rem, 0.857rem + 0.402vw, 1.5rem);
   }
-  .container .body-intro-buttons button {
+  .body-intro-buttons button {
     font-size: clamp(1.2rem, 0.857rem + 0.402vw, 1.5rem);
   }
-  .container .body-image {
+  .body-image {
     grid-area: 1/2/3/3;
     height: 100%;
   }
-  .container .body-footer {
+  .body-footer {
     flex-direction: row;
     align-items: center;
     grid-area: 2/1/2/2;
     padding: clamp(2rem, 0.857rem + 1.786vw, 3rem) clamp(5.5rem, 4.928rem + 0.67vw, 6rem);
     gap: clamp(1rem, -4.72rem + 6.7vw, 6rem);
   }
-  .container .body-footer-quicklinks {
+  .body-footer-quicklinks {
     align-items: start;
   }
-  .container .body-footer-quicklinks .primary_link {
+  .body-footer-quicklinks .primary_link {
     font-size: clamp(1.2rem, 0.742rem + 0.536vw, 1.6rem);
   }
-  .container .body-footer-info {
+  .body-footer-info {
     flex-grow: 1;
   }
-  .container .body-footer-info h4 {
+  .body-footer-info h4 {
     font-size: clamp(1.2rem, 0.857rem + 0.402vw, 1.5rem);
     padding-block: clamp(0.625rem, 0.339rem + 0.335vw, 0.875rem);
-  }
-}
-/* Keyframes [ANIMATION]*/
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }/*# sourceMappingURL=home.css.map */
