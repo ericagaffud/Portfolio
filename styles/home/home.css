@@ -28,6 +28,7 @@
   font-weight: 700;
   padding: 10px;
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 .body-intro-buttons .primary_link img {

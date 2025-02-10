@@ -5,7 +5,7 @@
         Software Developer
     </h3>
     <div class="body-intro-buttons">
-        <button class="primary_btn"> Hire Me </button>
+        <button id="hireMe" class="primary_btn"> Hire Me </button>
         <button id="gotoWork" class="primary_link"> 
             Project
             <img src="./assets/icons/expand-icon.png" alt="">
@@ -34,6 +34,21 @@
 </div>
 <script>
     $(document).ready(function() {
+        $(document).on('click', '#hireMe', function(){
+            var email = "ericadurangaffud@gmail.com";
+            var subject = "Job Inquiry";
+            var body = "Hello, I would like to hire you!"
+
+            var gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            setTimeout(() => {
+                var newWindow = window.open(gmailLink, '_blank');
+                if (!newTab || newTab.closed || typeof newTab.closed == 'undefined') { 
+                    window.location.href = gmailLink;
+                }
+            }, 100);
+        });
+
         $(document).on('click', '#gotoWork', function(){
             $('.header-nav-item').removeClass('active-item');
             $('.header-nav-item[data-page="Work"]').addClass('active-item');
