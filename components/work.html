@@ -100,4 +100,26 @@
             $('.backdrop').hide();
         }, 1000);
     });
+
+    $(".fa-clone").on("click", function () {
+        var text = $(this).parent().text().trim();
+
+        navigator.clipboard.writeText(text).then(() => {
+            var $tooltip = $("<div class='tooltip'>Copied!</div>");
+            $("body").append($tooltip);
+
+            var offset = $(this).offset();
+            $tooltip.css({
+                top: offset.top - $tooltip.outerHeight() - 10,
+                left: offset.left + $(this).outerWidth() / 2 - $tooltip.outerWidth() / 2
+            });
+
+            $tooltip.addClass("visible");
+            setTimeout(() => {
+                $tooltip.remove();
+            }, 1500);
+        }).catch(err => {
+            console.error("Failed to copy text: ", err);
+        });
+    });
 </script>

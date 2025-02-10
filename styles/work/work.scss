@@ -129,6 +129,23 @@
     }
 }
 
+.tooltip {
+    position: absolute;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
 @media only screen and (min-width: 1024px) {
     :root {
         --margin-inline: clamp(6rem, 0.667rem + 8.333vw, 14rem);
