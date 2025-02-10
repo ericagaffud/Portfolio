@@ -5,11 +5,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background: #ffcfcf !important;
+  background: var(--secondary-color) !important;
 }
 
 .container {
   height: 90vh !important;
+  overflow-y: scroll !important;
 }
 .container .header {
   position: sticky;

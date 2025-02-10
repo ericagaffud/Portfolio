@@ -44,6 +44,9 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+.header-nav-close i {
+  color: #fff;
+}
 .header-nav-item {
   color: #fff;
   cursor: pointer;

@@ -28,6 +28,7 @@
   margin: auto;
   font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 .body-work__hero__tag .tertiary_btn img {

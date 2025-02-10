@@ -1,7 +1,7 @@
 <div class="body-work__hero">
     <div class="body-work__hero__tag">
         <h1>Creating <span>BRANDS</span> that connect & inspire</h1>
-        <button class="tertiary_btn"> 
+        <button id="logoButton" class="tertiary_btn"> 
             Logo
             <img src="./assets/icons/expand-icon-colored.png" alt="">
         </button>
@@ -25,8 +25,8 @@
         <h4 class="font-style">guest_benefactor<i class="fas fa-clone"></i></h4>
         <h4 class="bold">Password:</h4>
         <h4 class="font-style">Accidentm0nit0ring0621!<i class="fas fa-clone"></i></h4>
-        <button class="primary_btn">Go to Website</button>
-        <button class="primary_btn_outline">Go to Prototype</button>
+        <button id="amsWebsiteBtn" class="primary_btn">Go to Website</button>
+        <button id="amsPrototypeBtn" class="primary_btn_outline">Go to Prototype</button>
     </div>
 </div>
 <div class="body-work__system info-second">
@@ -41,14 +41,63 @@
         <h4>Navigate through the prototype by clicking buttons from 'Get Started', 
             menu tabs and tabs in Assets page.
         </h4>
-        <button class="primary_btn">Go to Prototype</button>
+        <button id="cashCareBtn" class="primary_btn">Go to Prototype</button>
     </div>
 </div>
 <div class="body-work__prototype">
     <h1>Prototype</h1>
     <div class="body-work__prototype--images">
-        <img src="./assets/work/card-prototype.png" alt="">
-        <img src="./assets/work/food-galore-prototype.png" alt="">
-        <img src="./assets/work/coffee-maker-prototype.png" alt="">
+        <img src="./assets/work/card-prototype.png" data-page="omada">
+        <img src="./assets/work/food-galore-prototype.png" data-page="food-galore">
+        <img src="./assets/work/coffee-maker-prototype.png" data-page="coffee-maker">
     </div>
 </div>
+<div class="backdrop"></div>
+<script>
+    $(document).ready(function(){
+        var pathName = window.location.pathname.split('/');
+        var title = pathName.length == 1 ? '' : pathName[1];
+        var url = title == 'Portfolio' ? '/Portfolio' : '';
+
+        $('.body-work__prototype--images img').on('click', function(){
+            var page = $(this).data('page');
+            window.location.href = url + '/pages/' + page + '.html';
+        });
+    })
+    $('#logoButton').on('click', function(){
+        var pathName = window.location.pathname.split('/');
+        var title = pathName.length == 1 ? '' : pathName[1];
+        var url = title == 'Portfolio' ? '/Portfolio' : '';
+
+        window.location.href = url + '/pages/logo.html';
+    });
+
+    $('#amsWebsiteBtn').on('click', function() {
+        $('.backdrop').css({'display': 'flex'})
+        $('.backdrop').load('./components/loader.html');
+
+        setTimeout(() => {
+            window.open('https://ericagaffud.github.io/Accident-Monitoring-System/');
+            $('.backdrop').hide();
+        }, 1000);
+    });
+
+    $('#amsPrototypeBtn').on('click', function() {
+        $('.backdrop').css({'display': 'flex'})
+        $('.backdrop').load('./components/loader.html');
+
+        setTimeout(() => {
+            window.open('https://www.figma.com/proto/bFlewnXHbnP2Jts0aVD4vj/Erica-Gaffud-IXD?node-id=90-2&node-type=frame&t=ERuC7nNVCVU5NekK-0&scaling=min-zoom&content-scaling=fixed&page-id=88%3A5&starting-point-node-id=90%3A2');
+            $('.backdrop').hide();
+        }, 1000);
+    });
+
+    $('#cashCareBtn').on('click', function() {$('.backdrop').css({'display': 'flex'})
+        $('.backdrop').load('./components/loader.html');
+
+        setTimeout(() => {
+            window.open('https://www.figma.com/proto/MCqpAC5wzsqNDOS4LTctH1/Budget-Tracker?node-id=9-127&node-type=frame&t=uFVtb2DueBgLKhAl-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A41');
+            $('.backdrop').hide();
+        }, 1000);
+    });
+</script>
