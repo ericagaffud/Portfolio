@@ -82,7 +82,7 @@ button {
     background-color: var(--primary-color);
 
     &:hover {
-        opacity: 0.98;
+        opacity: 0.95;
     }
 }
 
@@ -90,7 +90,7 @@ button {
     background-color: var(--secondary-color);
 
     &:hover {
-        background-color: var(--secondary-color-tint);
+        opacity: 0.95;
     }
 }
 
@@ -98,7 +98,7 @@ button {
     background-color: var(--tertiary-color);
 
     &:hover {
-        background-color: var(--tertiary-color-tint);
+        opacity: 0.95;
     }
 }
 

@@ -78,21 +78,21 @@ button {
   background-color: var(--primary-color);
 }
 .primary_btn:hover {
-  opacity: 0.98;
+  opacity: 0.95;
 }
 
 .secondary_btn {
   background-color: var(--secondary-color);
 }
 .secondary_btn:hover {
-  background-color: var(--secondary-color-tint);
+  opacity: 0.95;
 }
 
 .tertiary_btn {
   background-color: var(--tertiary-color);
 }
 .tertiary_btn:hover {
-  background-color: var(--tertiary-color-tint);
+  opacity: 0.95;
 }
 
 .primary_btn_outline {
