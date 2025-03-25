@@ -3,7 +3,7 @@
 }
 
 .body-about {
-  padding-block: clamp(3rem, 2.545rem + 2.276vw, 4rem);
+  padding-block-start: clamp(3rem, 2.545rem + 2.276vw, 4rem);
 }
 .body-about__hero {
   margin-inline: var(--margin-inline);
@@ -25,8 +25,11 @@
   line-height: 149.42%;
   font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
 }
+.body-about__hero h3 span {
+  font-weight: bold;
+}
 .body-about__mycareer {
-  background: rgba(216, 182, 164, 0.4);
+  background: var(--tertiary-color);
   text-align: center;
   padding-inline: var(--margin-inline);
   padding-block: clamp(2rem, 1.317rem + 3.414vw, 3.5rem);
@@ -37,7 +40,8 @@
   font-weight: 800;
 }
 .body-about__mycareer h3 {
-  margin-block: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+  margin-block-start: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+  margin-block-end: clamp(2rem, 1.519rem + 2.801vw, 6rem);
   letter-spacing: 0.04em;
   line-height: 149.42%;
   font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
@@ -151,14 +155,16 @@
   opacity: 0.4;
 }
 .body-about__proficiency {
-  margin-inline: var(--margin-inline);
-  padding-block-start: clamp(2rem, 1.317rem + 3.414vw, 3.5rem);
+  padding-inline: var(--margin-inline);
+  padding-block: clamp(2rem, 1.317rem + 3.414vw, 3.5rem);
+  background-color: var(--tertiary-color);
 }
 .body-about__proficiency h1 {
   color: var(--primary-color);
   font-size: clamp(2rem, 1.09rem + 4.552vw, 4rem);
-  margin-bottom: clamp(1rem, 0.545rem + 2.276vw, 2rem);
+  margin-bottom: clamp(1rem, 0.759rem + 1.4vw, 3rem);
   text-align: center;
+  font-weight: bold;
 }
 .body-about__proficiency div {
   display: grid;
@@ -169,12 +175,12 @@
 .body-about__proficiency div img {
   width: clamp(3rem, 1.634rem + 6.828vw, 6rem);
 }
-.body-about__proficiency div:nth-child(2),
 .body-about__proficiency div:nth-child(3),
-.body-about__proficiency div:nth-child(4) {
+.body-about__proficiency div:nth-child(4),
+.body-about__proficiency div:nth-child(5) {
   grid-template-columns: repeat(3, 1fr);
 }
-.body-about__proficiency div:nth-child(5) {
+.body-about__proficiency div:nth-child(2) {
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -204,8 +210,6 @@
     line-height: 190%;
   }
   .body-about__mycareer {
-    display: flex;
-    gap: clamp(2rem, -0.667rem + 4.167vw, 6rem);
     text-align: start;
     align-items: start;
     padding-block: clamp(5rem, -5rem + 15.625vw, 20rem);
@@ -229,6 +233,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
+    margin-block: 5rem;
   }
   .body-about__experiences h1 {
     grid-row: 1/span 3;
@@ -253,16 +258,16 @@
     width: clamp(25rem, 11.667rem + 20.833vw, 45rem);
   }
   .body-about__proficiency div {
-    margin-block: clamp(4rem, 2rem + 3.125vw, 7rem);
+    margin-block: clamp(3rem, 1.667rem + 2.083vw, 5rem);
   }
   .body-about__proficiency div img {
-    width: clamp(6rem, 4rem + 3.125vw, 9rem);
+    width: clamp(4rem, 2rem + 3.125vw, 7rem);
   }
-  .body-about__proficiency div:nth-child(2) {
+  .body-about__proficiency div:nth-child(3) {
     grid-template-columns: repeat(6, 1fr);
   }
-  .body-about__proficiency div:nth-child(3),
-  .body-about__proficiency div:nth-child(4) {
+  .body-about__proficiency div:nth-child(4),
+  .body-about__proficiency div:nth-child(5) {
     grid-template-columns: repeat(5, 1fr);
   }
 }/*# sourceMappingURL=about.css.map */
