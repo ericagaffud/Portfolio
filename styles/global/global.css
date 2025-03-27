@@ -154,11 +154,11 @@ button {
   align-items: center;
   background-color: #f6f6f6;
   border-radius: 5px;
+  border: 1px solid var(--secondary-color);
   padding: 5px 10px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 4px 2px 4px #ffa6c8, inset 2px 2px 4px rgba(149, 149, 149, 0.5);
   gap: 5px;
 }
 .page-header #backBtn {
@@ -169,7 +169,7 @@ button {
 }
 .page-header div .page-title {
   font-weight: 600;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-transform: capitalize;
   font-size: clamp(1rem, 0.833rem + 0.973vw, 2rem);
 }

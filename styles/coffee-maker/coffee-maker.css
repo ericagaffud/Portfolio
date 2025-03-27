@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background: var(--secondary-color) !important;
+  background: var(--tertiary-color) !important;
 }
 
 .container {
