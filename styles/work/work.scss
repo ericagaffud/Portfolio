@@ -4,7 +4,7 @@
 
 .body-work {
     &__hero {
-        background-color: #B9A48C;
+        background-color: var(--tertiary-color);
         padding-inline: var(--margin-inline);
         position: relative;
         padding-block: clamp(6rem, 3.269rem + 13.656vw, 12rem) 16rem;;
@@ -13,19 +13,17 @@
             width: clamp(10rem, 0.896rem + 45.519vw, 30rem);
 
             h1 {
-                color: #fff;
                 font-size: clamp(1.5rem, 1.045rem + 2.276vw, 2.5rem);
                 text-align: center;
                 margin-bottom: clamp(2rem, 1.545rem + 2.276vw, 3rem);
 
                 span {
                     font-weight: 700;
-                    color: #fff;
+                    color: var(--primary-color);
                 }
             }
 
-            .tertiary_btn {
-                color: var(--primary-color);
+            .primary_btn {
                 font-weight: 700;
                 padding: 10px clamp(1.875rem, 1.306rem + 2.845vw, 3.125rem);
                 margin: auto;
@@ -54,7 +52,7 @@
         flex-direction: column;
         gap: clamp(1rem, 0.545rem + 2.276vw, 2rem);
         margin-inline: var(--margin-inline);
-        padding-block: var(--margin-inline);
+        padding-block-end: var(--margin-inline);
 
         &--img {
             img {
@@ -100,32 +98,57 @@
 
     &__prototype {
         background-color: var(--tertiary-color);
-        padding: var(--margin-inline);
+        padding-inline: var(--margin-inline);
+        padding-block: 0 var(--margin-inline);
         margin-top: 2rem;
 
         h1 {
             color: var(--primary-color);
             font-size: clamp(2rem, 1.09rem + 4.552vw, 4rem);
             text-align: center;
-            margin-bottom: var(--margin-inline);
         }
 
         &--images {
             display: grid;
             gap: clamp(1rem, 0.09rem + 4.552vw, 3rem);
 
-            img {
-                width: clamp(15rem, 11.358rem + 18.208vw, 23rem);
+            > div {
+                width: fit-content;
+                text-align: center;
+                cursor: pointer;
+
+                h3 {
+                    color: var(--primary-color);
+                    font-size: clamp(1rem, 0.772rem + 1.138vw, 1.5rem);
+                }
+
+                img {
+                    width: clamp(9rem, 6.059rem + 17.112vw, 17rem);
+                    transition: transform 0.3s ease, margin 0.3s ease;
+  
+                    &:hover {
+                        transform: scale(1.1);
+                        margin-top: -5rem;
+                        margin-bottom: 5rem;
+                    }
+                }
             }
 
-            img:nth-child(2) {
-                margin-left: clamp(1.5rem, -4.417rem + 29.587vw, 14.5rem);
+            div:nth-child(2) {
+                margin-left: clamp(3rem, -2.147rem + 29.947vw, 17rem);
             }
 
-            img:nth-child(3) {
-                margin-left: clamp(3rem, -8.835rem + 59.175vw, 29rem);
+            div:nth-child(3) {
+                margin-left: clamp(6rem, -4.294rem + 59.893vw, 34rem);
             }
         }
+    }
+
+    &-title {
+        color: var(--primary-color);
+        font-size: clamp(1.5rem, 1.045rem + 2.276vw, 2.5rem) !important;
+        text-align: center;
+        padding-block: clamp(2rem, 1.545rem + 2.276vw, 3rem);
     }
 }
 
@@ -157,6 +180,9 @@
             &__tag {
                 width: clamp(30rem, 10rem + 31.25vw, 60rem);
 
+                .primary_btn {
+                    gap: 10px;
+                }
                 h1 {
                     font-size: clamp(3rem, 1.667rem + 2.083vw, 5rem);
                 }
@@ -171,7 +197,7 @@
             flex-direction: row;
             align-items: center;
             gap: clamp(2rem, -3.333rem + 8.333vw, 10rem);
-            padding-block: clamp(6rem, 2rem + 6.25vw, 12rem);
+            padding-block-end: clamp(6rem, 2rem + 6.25vw, 12rem);
 
             &--img {
 
@@ -182,24 +208,24 @@
 
             &--info {
                 h3 {
-                    font-size: clamp(1rem, 0.772rem + 1.138vw, 1.5rem);
+                    font-size: clamp(1rem, 0.667rem + 0.521vw, 1.5rem);
                 }
 
                 h4 {
-                    font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
+                    font-size: clamp(0.8rem, 0.467rem + 0.521vw, 1.3rem);
                 }
             }
 
         }
 
-        .info-second {
-            flex-direction: row-reverse !important;
-        }
+        // .info-second {
+        //     flex-direction: row-reverse !important;
+        // }
 
         &__prototype {
             h1 {
                 font-size: clamp(3rem, 1.667rem + 2.083vw, 5rem);
-                margin-bottom: clamp(4rem, 0rem + 6.25vw, 10rem);
+                margin-top: 1rem;
             }
 
             &--images {
@@ -211,16 +237,21 @@
                     width: clamp(15rem, 8.333rem + 10.417vw, 25rem);
                 }
 
-                img:nth-child(2) {
+                div:nth-child(2) {
                     margin-left: 0 !important;
                     transform: translateY(clamp(3rem, 1rem + 3.125vw, 6rem));;
                 }
 
-                img:nth-child(3) {
+                div:nth-child(3) {
                     margin-left: 0 !important;
                     transform: translateY(clamp(6rem, 4rem + 3.125vw, 9rem));
                 }
             }
+        }
+
+        &-title {
+            font-size: clamp(3rem, 1.667rem + 2.083vw, 5rem);
+            padding-block: clamp(3rem, 0.333rem + 4.167vw, 7rem);
         }
     }
 }
