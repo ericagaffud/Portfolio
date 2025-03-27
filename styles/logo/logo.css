@@ -5,10 +5,15 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background: var(--secondary-color) !important;
+  background: var(--tertiary-color) !important;
 }
 
 .container {
+  width: 80vw;
+  height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   height: 90vh !important;
   overflow-y: scroll !important;
 }
@@ -21,7 +26,9 @@ body {
   display: grid;
   place-items: center;
   gap: 5rem;
-  margin-top: 5rem;
+  margin-top: clamp(2rem, 1.759rem + 1.4vw, 4rem);
+  background-color: #f6f6f6;
+  padding-block: clamp(2rem, 1.759rem + 1.4vw, 4rem);
 }
 .container .logoDiv img {
   height: 4rem;
