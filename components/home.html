@@ -23,7 +23,7 @@
             <img src="./assets/icons/about-icon.png" alt="Know More About Me icon">
             Know More About Me
         </button>
-        <button class="primary_link">
+        <button id="gotoMyWork" class="primary_link">
             <img src="./assets/icons/work-icon.png" alt="Contact icon">
             My Works
         </button>
@@ -51,7 +51,7 @@
             }, 100);
         });
 
-        $(document).on('click', '#gotoWork', function(){
+        $(document).on('click', '#gotoWork, #gotoMyWork', function(){
             $('.header-nav-item').removeClass('active-item');
             $('.header-nav-item[data-page="Work"]').addClass('active-item');
 
