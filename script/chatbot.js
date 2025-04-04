@@ -1,16 +1,32 @@
 $(document).ready(function(){
+    $(document).on('click', '#letsChat', function () {
+        $('#chatBot').load('./components/chatbot.html', function() {
+            $('.chatbot').css({
+                "display": "block",
+                "top": "100vh"
+            }).animate({ top: "30vh" }, 500);
+            
+            loadQuestions();
+        });
+    });
+
     $(document).on('input', '.chatbot-getname-input', function() {
         var inputName = $(this).val();
 
-        $('.chatbot-getname-submit').fadeIn();
+        $('.chatbot-getname-submit').show();
 
         if (!inputName) {
             $('.chatbot-getname-submit').fadeOut();
         }
     });
 
-    $('.chatbot-getname-submit').on('click', function(){
+    var userName = "";
+
+    $(document).on('click', '.chatbot-getname-submit', function(){
         let name = $('.chatbot-getname-input').val().trim();
+        console.log('Name from input:', name); 
+
+        $('.chatbot-name').text(name);
 
         let storedNames = getLocalArrayNames();
 
@@ -21,7 +37,8 @@ $(document).ready(function(){
 
         setLocalArrayNames(namesArray);
 
-        $('.chatbot-getname-input').val("");
+        $('.chatbot-getname').hide();
+        $('.chatbot-content').css("display", "flex");
     });
 
     let questions = [
@@ -33,17 +50,14 @@ $(document).ready(function(){
         "Can you tell me about your experience in frontend development?"
     ];
 
-    let chatbotButtons = $('.chatbot-content-buttons');
-    let chatbotTyping = $('.chatbot-content-typing');
-
     function loadQuestions() {
-        chatbotButtons.find('.chatbot-content-buttons-questions').remove();
+        $('.chatbot-content-buttons').find('.chatbot-content-buttons-questions').remove();
 
         if (questions.length === 0) {
-            chatbotButtons.append(`<h4 class="chatbot-no-questions">If you have other questions, just message me!</h4>`);
+            $('.chatbot-content-buttons').append(`<h4 class="chatbot-no-questions">If you have other questions, just message me!</h4>`);
         } else if (questions.length != 6 && questions.length != 0) {
             $('.chatbot-content-buttons-questions').css("margin-top", "1rem");
-            chatbotButtons.append(`<h4 class="chatbot-ask-more">Ask more questions below</h4>`);
+            $('.chatbot-content-buttons').append(`<h4 class="chatbot-ask-more">Ask more questions below</h4>`);
         }
 
         let questionList = $('<div class="chatbot-content-buttons-questions"></div>');
@@ -51,30 +65,28 @@ $(document).ready(function(){
             questionList.append(`<h4 class="chatbot-content-buttons-questions-question">${question}</h4>`);
         });
 
-        chatbotButtons.append(questionList);
+        $('.chatbot-content-buttons').append(questionList);
 
         setTimeout(() => {
-            chatbotButtons.animate({ scrollTop: chatbotButtons.prop("scrollHeight") }, 500);
+            $('.chatbot-content-buttons').animate({ scrollTop: $('.chatbot-content-buttons').prop("scrollHeight") }, 500);
         }, 100);
     }
 
-    loadQuestions();
-
-    chatbotButtons.on('click', '.chatbot-content-buttons-questions-question', function(){
+    $(document).on('click', '.chatbot-content-buttons-questions-question', function(){
         let selectedText = $(this).text();
 
-        chatbotButtons.append(`<h4 class="question-selected">${selectedText}</h4>`);
+        $('.chatbot-content-buttons').append(`<h4 class="question-selected">${selectedText}</h4>`);
 
         questions = questions.filter(q => q !== selectedText);
 
         $('.chatbot-content-buttons-questions').fadeOut(300);
         $('.chatbot-ask-more').fadeOut(300);
-        chatbotTyping.fadeIn(300);
+        $('.chatbot-content-typing').fadeIn(300);
 
         setTimeout(function(){
-            chatbotTyping.fadeOut(300, function() {
-                chatbotButtons.append(`<h4 class="chatbot-content-buttons-answer">${generateResponse(selectedText)}</h4>`); // Append answer below
-                loadQuestions(); // Reload remaining questions
+            $('.chatbot-content-typing').fadeOut(300, function() {
+                $('.chatbot-content-buttons').append(`<h4 class="chatbot-content-buttons-answer">${generateResponse(selectedText)}</h4>`); // Append answer below
+                loadQuestions();
                 $('.chatbot-content-buttons-questions').fadeIn(300);
             });
         }, 1500);

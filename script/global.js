@@ -47,15 +47,6 @@ $(document).ready(function(){
         $('.header-overlay').css('display', 'none');
     });
 
-    $(document).on('click', '#letsChat', function () {
-        $('#chatBot').load('./components/chatbot.html');
-        $('.chatbot').css({
-            "display": "block",
-            "top": "100vh"
-        }).animate({ top: "30vh" }, 500);
-    });
-    
-
     // $('.header-menu').load('./components/header-menu.html');
 
     // $('.header-page').load('../components/header.html');
