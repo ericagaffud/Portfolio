@@ -1,4 +1,21 @@
 $(document).ready(function(){
+    $('.chatbot-getname-submit').on('click', function(){
+        let name = $('.chatbot-getname-input').val().trim();
+
+        console.log("NAME", name);
+
+        let storedNames = getLocalArrayNames();
+
+        let namesArray = storedNames ? storedNames.split(", ") : [];
+        if (!namesArray.includes(name)) {
+            namesArray.push(name);
+        }
+
+        setLocalArrayNames(namesArray);
+
+        $('.chatbot-getname-input').val("");
+    })
+
     let questions = [
         "Are you currently looking for job opportunities?",
         "Are you available for long-term collaboration?",
@@ -40,10 +57,8 @@ $(document).ready(function(){
 
         chatbotButtons.append(`<h4 class="question-selected">${selectedText}</h4>`);
 
-        // Remove selected question from the list
         questions = questions.filter(q => q !== selectedText);
 
-        // Hide all questions before showing typing effect
         $('.chatbot-content-buttons-questions').fadeOut(300);
         $('.chatbot-ask-more').fadeOut(300);
         chatbotTyping.fadeIn(300);

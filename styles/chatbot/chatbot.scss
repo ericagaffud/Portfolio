@@ -14,6 +14,32 @@
     // background: linear-gradient(144.27deg, #EEEBDD 42.15%, #630000 140.78%);
 }
 
+.chatbot-getname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 1rem;
+
+    &-input {
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        padding: 15px;
+        color: #fff;
+        font-weight: bolder;
+        font-size: 1rem;
+    }
+
+    &-submit {
+        border: none;
+        background: transparent;
+        font-size: 1rem;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
 .chatbot-content {   
     display: none;
     flex-direction: column;
