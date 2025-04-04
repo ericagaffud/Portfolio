@@ -67,6 +67,7 @@
   padding: clamp(0.313rem, 0.17rem + 0.711vw, 0.625rem);
   color: #fff;
   display: flex;
+  align-items: center;
   gap: clamp(0.313rem, 0.028rem + 1.422vw, 0.938rem);
 }
 .body-footer-quicklinks .primary_link img {

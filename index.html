@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./styles/home/home.css">
     <link rel="stylesheet" href="./styles/about/about.css">
     <link rel="stylesheet" href="./styles/work/work.css">
+    <link rel="stylesheet" href="./styles/chatbot/chatbot.css">
 </head>
 <body>
     <div class="container">
@@ -25,8 +26,22 @@
         <div id="bodyHome" class="body"></div>
         <div id="bodyAbout" class="body-about"></div>
         <div id="bodyWork" class="body-work"></div>
+        <div class="chatbot">
+            <div class="chatbot-getname">
+                
+            </div>
+            <div class="chatbot-content">
+                <div class="chatbot-content-headline">
+                    <img src="./assets/chatbot.png">
+                    <h3>Hello, how can I help you?</h3>
+                </div>
+                <h4 class="chatbot-content-try">Try asking...</h4>
+                <div class="chatbot-content-buttons"></div>
+                <h4 class="chatbot-content-typing">Typing...</h4>
+            </div>
+        </div>
     </div>
-
+    <script src="./script/chatbot.js"></script>
     <script src="./script/storage.js"></script>
     <script src="./script/global.js"></script>
     <script src="./script/animation.js"></script>
