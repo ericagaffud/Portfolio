@@ -1,8 +1,16 @@
 $(document).ready(function(){
+    $(document).on('input', '.chatbot-getname-input', function() {
+        var inputName = $(this).val();
+
+        $('.chatbot-getname-submit').fadeIn();
+
+        if (!inputName) {
+            $('.chatbot-getname-submit').fadeOut();
+        }
+    });
+
     $('.chatbot-getname-submit').on('click', function(){
         let name = $('.chatbot-getname-input').val().trim();
-
-        console.log("NAME", name);
 
         let storedNames = getLocalArrayNames();
 
@@ -14,7 +22,7 @@ $(document).ready(function(){
         setLocalArrayNames(namesArray);
 
         $('.chatbot-getname-input').val("");
-    })
+    });
 
     let questions = [
         "Are you currently looking for job opportunities?",

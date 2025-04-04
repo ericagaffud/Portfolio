@@ -2,16 +2,29 @@
     position: relative;
 }
 
-.chatbot { 
-    position: absolute;
-    top: 30vh;
+.chatbot {
+    display: none;
+    position: fixed;
+    top: 100vh;
     height: 70vh;
-    width: 100%;
 
+    width: 100%;
+    max-width: 20rem;
     padding: 1rem;
     border-radius: 20px 20px 0px 0px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     // background: linear-gradient(144.27deg, #EEEBDD 42.15%, #630000 140.78%);
+
+    &-draggable {
+        width: 100px;
+        height: 10px;
+        background: #e5e5e5;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
 }
 
 .chatbot-getname {
@@ -27,15 +40,21 @@
         background: transparent;
         padding: 15px;
         color: #fff;
-        font-weight: bolder;
         font-size: 1rem;
+        text-align: center;
+
+        &::placeholder {
+            color: #fff;
+            opacity: 1;
+        }
     }
 
     &-submit {
+        display: none;
         border: none;
         background: transparent;
         font-size: 1rem;
-        color: #fff;
+        color: var(--primary-color);
         cursor: pointer;
     }
 }
