@@ -20,8 +20,6 @@ $(document).ready(function(){
         }
     });
 
-    var userName = "";
-
     $(document).on('click', '.chatbot-getname-submit', function(){
         let name = $('.chatbot-getname-input').val().trim();
         console.log('Name from input:', name); 
@@ -37,8 +35,10 @@ $(document).ready(function(){
 
         setLocalArrayNames(namesArray);
 
-        $('.chatbot-getname').hide();
-        $('.chatbot-content').css("display", "flex");
+        setTimeout(()=>{
+            $('.chatbot-getname').hide();
+            $('.chatbot-content').css("display", "flex");
+        }, 500);
     });
 
     let questions = [
@@ -80,6 +80,7 @@ $(document).ready(function(){
         questions = questions.filter(q => q !== selectedText);
 
         $('.chatbot-content-buttons-questions').fadeOut(300);
+        $('.chatbot-content-try').fadeOut(300);
         $('.chatbot-ask-more').fadeOut(300);
         $('.chatbot-content-typing').fadeIn(300);
 
