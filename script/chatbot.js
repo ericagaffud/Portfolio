@@ -1,10 +1,15 @@
 $(document).ready(function(){
     $(document).on('click', '#letsChat', function () {
+        $(this).prop("disabled", true);
         $('#chatBot').load('./components/chatbot.html', function() {
             $('.chatbot').css({
                 "display": "block",
                 "top": "100vh"
             }).animate({ top: "30vh" }, 500);
+
+            setTimeout(function () {
+                $('.chatbot-close').addClass('animate-rotate');
+            }, 700);
             
             loadQuestions();
         });
@@ -22,7 +27,6 @@ $(document).ready(function(){
 
     $(document).on('click', '.chatbot-getname-submit', function(){
         let name = $('.chatbot-getname-input').val().trim();
-        console.log('Name from input:', name); 
 
         $('.chatbot-name').text(name);
 
@@ -49,6 +53,8 @@ $(document).ready(function(){
         "Can I submit a job opportunity for you to consider?",
         "Can you tell me about your experience in frontend development?"
     ];
+
+    let allQuestions = [...questions];
 
     function loadQuestions() {
         $('.chatbot-content-buttons').find('.chatbot-content-buttons-questions').remove();
@@ -91,6 +97,20 @@ $(document).ready(function(){
                 $('.chatbot-content-buttons-questions').fadeIn(300);
             });
         }, 1500);
+    });
+
+    $(document).on('click', '.chatbot-close', function() {
+        questions = [...allQuestions];
+
+        $('.chatbot').animate(
+            { top: "100vh" }, // slide it down
+            {
+                duration: 800,
+                complete: function () {
+                    $(this).css("display", "none");
+                }
+            }
+        );        
     });
 
     function generateResponse(question) {

@@ -20,7 +20,6 @@ $(document).ready(function(){
             $('.header-overlay').css('display', 'none');
             var dataPage = $(this).data('page');
             var pageID = '#body' + dataPage;
-            console.log("PAGE BODY:", pageID);
 
             $('.body, .body-about, .body-work').hide();
             $(pageID).show();

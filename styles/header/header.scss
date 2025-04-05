@@ -98,6 +98,17 @@
             font-size: clamp(0.75rem, 0.636rem + 0.569vw, 1rem);
             background-color: transparent;
             border-radius: 15px
+
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+
+            &:hover {
+                background-color: unset;
+                color: var(--primary-color);
+            }
         }
 
         i {

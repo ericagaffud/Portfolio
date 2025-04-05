@@ -88,6 +88,14 @@
   background-color: transparent;
   border-radius: 15px;
 }
+.header > div button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.header > div button:disabled:hover {
+  background-color: unset;
+  color: var(--primary-color);
+}
 .header > div i {
   font-size: clamp(1rem, 0.772rem + 1.138vw, 1.5rem);
   color: var(--primary-color);
