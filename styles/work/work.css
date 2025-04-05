@@ -6,6 +6,7 @@
   background-color: var(--tertiary-color);
   padding-inline: var(--margin-inline);
   position: relative;
+  z-index: -1;
   padding-block: clamp(6rem, 3.269rem + 13.656vw, 12rem) 16rem;
 }
 .body-work__hero__tag {

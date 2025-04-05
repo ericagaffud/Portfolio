@@ -101,6 +101,7 @@ $(document).ready(function(){
 
     $(document).on('click', '.chatbot-close', function() {
         questions = [...allQuestions];
+        $('#letsChat').prop("disabled", false);
 
         $('.chatbot').animate(
             { top: "100vh" }, // slide it down
