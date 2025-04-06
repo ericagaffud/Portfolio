@@ -116,12 +116,12 @@ $(document).ready(function(){
 
     function generateResponse(question) {
         let responses = {
-            "Are you currently looking for job opportunities?": "I'm here to assist you with any job-related queries!",
+            "Are you currently looking for job opportunities?": "Yes, I am currently looking for job opportunities and open to new roles in Design or in Software Development",
             "Are you available for long-term collaboration?": "Yes! Let's discuss the possibilities.",
             "Have you worked on any mobile app designs?": "Yes, I have experience designing mobile apps with a focus on UI/UX.",
-            "Have you worked with cross-functional teams?": "Absolutely! I enjoy collaborating with developers, designers, and stakeholders.",
+            "Have you worked with cross-functional teams?": "Absolutely! I’ve had experience working with teams that include members from diverse functions, ensuring smooth coordination and effective problem-solving.",
             "Can I submit a job opportunity for you to consider?": "Of course! Please share the details.",
-            "Can you tell me about your experience in frontend development?": "I specialize in frontend development with expertise in HTML, CSS, and JavaScript frameworks."
+            "Can you tell me about your experience in frontend development?": "I specialize in frontend development, with proficiency in HTML, CSS, and JavaScript. I also have experience working on projects involving C# ASP.NET MVC and mobile applications built with Ionic Angular."
         };
         return responses[question] || "I'm not sure how to answer that, but I'd love to learn more!";
     }

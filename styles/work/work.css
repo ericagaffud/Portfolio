@@ -75,6 +75,10 @@
   font-family: "Times New Roman", Times, serif;
   margin-right: 10px;
 }
+.body-work__system--info .font-style i {
+  margin-left: 10px;
+  cursor: pointer;
+}
 .body-work__system--info button {
   font-size: clamp(0.875rem, 0.704rem + 0.853vw, 1.25rem);
 }
@@ -108,9 +112,9 @@
   transition: transform 0.3s ease, margin 0.3s ease;
 }
 .body-work__prototype--images > div img:hover {
-  transform: scale(1.1);
-  margin-top: -5rem;
-  margin-bottom: 5rem;
+  transform: scale(0.9);
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 .body-work__prototype--images div:nth-child(2) {
   margin-left: clamp(3rem, -2.147rem + 29.947vw, 17rem);
